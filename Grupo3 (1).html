@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <b>Turfe do Amigo</b> <br />
+    <button onclick="volta()">Dar uma Volta</button> <br />
+    <div id="div_msg"></div>
+    <br /><br />
+    <div id="div_msg2"></div>
+  </body>
+</html>
+<script>
+  // Tempo total das voltas somado
+  var tempo_total_cavalo_1 = 0;
+  var tempo_total_cavalo_2 = 0;
+  var tempo_total_cavalo_3 = 0;
+  var contador = 0;
+
+  function volta() {
+    // Tempo de cada volta
+    // math.random completado NÂO MEXER
+    var primeiro = "";
+    var segundo = "";
+    var terceiro = "";
+    var tempo_volta_cavalo_1 = (Math.random() * 2 + 7).toFixed(1);
+    var tempo_volta_cavalo_2 = (Math.random() * 2 + 7).toFixed(1);
+    var tempo_volta_cavalo_3 = (Math.random() * 2 + 7).toFixed(1);
+    tempo_total_cavalo_1 += Number(tempo_volta_cavalo_1);
+    tempo_total_cavalo_2 += Number(tempo_volta_cavalo_2);
+    tempo_total_cavalo_3 += Number(tempo_volta_cavalo_3);
+    contador++;
+    div_msg.innerHTML += `
+        Volta 0${contador} <br>
+        Cavalo01 - ${tempo_volta_cavalo_1} - ${tempo_total_cavalo_1.toFixed(
+      1
+    )} -
+        Cavalo02 - ${tempo_volta_cavalo_2} - ${tempo_total_cavalo_2.toFixed(
+      1
+    )} -
+        Cavalo03 - ${tempo_volta_cavalo_3} - ${tempo_total_cavalo_3.toFixed(1)}
+        <br> <br>
+        `;
+
+    if (contador == 7) {
+      if (
+        tempo_total_cavalo_1 < tempo_total_cavalo_2 &&
+        tempo_total_cavalo_2 < tempo_total_cavalo_3
+      ) {
+        primeiro = "Cavalo 1";
+        segundo = " Cavalo 2";
+        terceiro = "Cavalo 3";
+      } else if (
+        tempo_total_cavalo_1 < tempo_total_cavalo_3 &&
+        tempo_total_cavalo_3 < tempo_total_cavalo_2
+      ) {
+        primeiro = "Cavalo 1";
+        segundo = " Cavalo 3";
+        terceiro = "Cavalo 2";
+      } else if (
+        tempo_total_cavalo_2 < tempo_total_cavalo_1 &&
+        tempo_total_cavalo_1 < tempo_total_cavalo_3
+      ) {
+        primeiro = "Cavalo 2";
+        segundo = " Cavalo 1";
+        terceiro = "Cavalo 3";
+      } else if (
+        tempo_total_cavalo_2 < tempo_total_cavalo_3 &&
+        tempo_total_cavalo_3 < tempo_total_cavalo_1
+      ) {
+        primeiro = "Cavalo 2";
+        segundo = " Cavalo 3";
+        terceiro = "Cavalo 1";
+      } else if (
+        tempo_total_cavalo_3 < tempo_total_cavalo_1 &&
+        tempo_total_cavalo_1 < tempo_total_cavalo_2
+      ) {
+        primeiro = "Cavalo 3";
+        segundo = " Cavalo 1";
+        terceiro = "Cavalo 2";
+      } else {
+        primeiro = "Cavalo 3";
+        segundo = "Cavalo 2";
+        terceiro = "Cavalo 1";
+      }
+      div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
+                            Em 2º Lugar – ${segundo} <br>
+                            Em 3º Lugar – ${terceiro} <br>`;
+
+      //   div_msg.innerHTML = ``
+      //   div_msg2.innerHTML = ``
+
+      if (
+        tempo_total_cavalo_1 == tempo_total_cavalo_2 &&
+        tempo_total_cavalo_1 < tempo_total_cavalo_3
+      ) {
+        primeiro = "Cavalo 1 e Cavalo 2";
+        segundo = "Cavalo3";
+        div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
+                            Em 2º Lugar – ${segundo}`;
+      } else if (
+        tempo_total_cavalo_1 == tempo_total_cavalo_2 &&
+        tempo_total_cavalo_1 > tempo_total_cavalo_3
+      ) {
+        segundo = "Cavalo 1 e Cavalo 2";
+        primeiro = "Cavalo3";
+        div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
+                            Em 2º Lugar – ${segundo}`;
+      } else if (
+        tempo_total_cavalo2 == tempo_total_cavalo_3 &&
+        tempo_total_cavalo_2 < tempo_total_cavalo_1
+      ) {
+        primeiro = "Cavalo 2 e Cavalo 3";
+        segundo = "Cavalo1";
+        div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
+                              Em 2º Lugar – ${segundo}`;
+      } else if (
+        tempo_total_cavalo2 == tempo_total_cavalo_3 &&
+        tempo_total_cavalo_2 > tempo_total_cavalo_1
+      ) {
+        segundo = "Cavalo 2 e Cavalo 3";
+        primeiro = "Cavalo1";
+        div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
+                              Em 2º Lugar – ${segundo}`;
+      } else if (
+        tempo_total_cavalo3 == tempo_total_cavalo_1 &&
+        tempo_total_cavalo_1 < tempo_total_cavalo_2
+      ) {
+        primeiro = "Cavalo 1 e Cavalo 3";
+        segundo = "Cavalo2";
+        div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
+                              Em 2º Lugar – ${segundo}`;
+      } else if (
+        tempo_total_cavalo3 == tempo_total_cavalo_1 &&
+        tempo_total_cavalo_1 > tempo_total_cavalo_2
+      ) {
+        segundo = "Cavalo 1 e Cavalo 3";
+        primeiro = "Cavalo2";
+        div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
+                              Em 2º Lugar – ${segundo}`;
+      }
+    }
+
+    if (contador > 7) {
+      contador = 0;
+      div_msg2.innerHTML = ``;
+      div_msg.innerHTML = ``;
+    }
+  }
+</script>
