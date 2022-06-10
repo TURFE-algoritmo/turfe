@@ -24,6 +24,7 @@
         </select>
         <button onclick="on_qtd_cavalos()">Quantidade de cavalos</button>
     </div>
+
     <div id="parte2" style="display: none ;">
 
         <!-- numero do cavalo -->
@@ -45,6 +46,7 @@
         <button onclick="adicionar_nome()">Adicionar nome</button>
         <button onclick="proximo()">proxima parte</button>
     </div>
+
     <div id="parte3" style="display: none ;">
 
         <!-- quantidade de voltas do turfe -->
@@ -52,6 +54,7 @@
         <input type="text" id="slc_qtd_voltas">
         <button onclick="on_qtd_voltas()">Adicionar voltas</button>
     </div>
+
     <div id="parte4" style="display: none ;">
 
 
@@ -101,28 +104,35 @@
         var nr_cavalo = Number(numero_cavalo.value)
         var nome = nome_cavalo.value
         if (nr_cavalo == 1) {
+
             nome_cv_1 = nome;
             alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
             alert(nome_cv_1)
+
         } else if (nr_cavalo == 2) {
+
             nome_cv_2 = nome;
+
             alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
         } else if (nr_cavalo == 3) {
+
             nome_cv_3 = nome;
             alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
         } else if (nr_cavalo == 4) {
+
             nome_cv_4 = nome;
             alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
         } else if (nr_cavalo == 5) {
+
             nome_cv_5 = nome;
             alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
         } else if (nr_cavalo == 6) {
-            nome_cv_6 = nome;
 
+            nome_cv_6 = nome;
             alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
         }
     }
