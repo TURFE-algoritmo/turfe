@@ -2,6 +2,12 @@
 var qtd_cavalos = 0;
 var qtd_voltas = 0;
 
+var colocacao = []
+
+var primeiro = "";
+var segundo = "";
+var terceiro = "";
+
 var nome_cv_1 = '';
 var nome_cv_2 = '';
 var nome_cv_3 = '';
@@ -86,13 +92,8 @@ function on_qtd_voltas() {
 
 }
 
-var colocacao = []
-
 function volta() {
 
-    var primeiro = "";
-    var segundo = "";
-    var terceiro = "";
     var tempo_volta_cavalo_1 = (Math.random() * 2 + 7).toFixed(1);
     var tempo_volta_cavalo_2 = (Math.random() * 2 + 7).toFixed(1);
     var tempo_volta_cavalo_3 = (Math.random() * 2 + 7).toFixed(1);
@@ -108,11 +109,6 @@ function volta() {
     contador++;
     colocacao = []
 
-    // ver a diferença e o primeiro colocado
-    // if()
-
-
-    // apenas mostrar por inner html
     if (contador <= qtd_voltas) {
 
         div_msg.innerHTML += (`<br>Volta ${contador} <br>`)
@@ -158,9 +154,6 @@ function volta() {
                 colocacao.push({ nome: nome_cv_6, tep: tempo_total_cavalo_6 })
             }
 
-
-
-
         }
         colocacao.sort(GetSortOrder("tep"));
         console.log(JSON.stringify(colocacao.sort(GetSortOrder("tep"))));
@@ -172,13 +165,93 @@ function volta() {
         var diferenca = temp_segundo - temp_primeiro;
         console.log(diferenca)
         if (diferenca == 0) {
-            div_msg.innerHTML += `<br>O priemrio colocado é ${primeiro_volta} || está empatado`
+
+            div_msg.innerHTML += `<br>O priemrio colocado é ${primeiro_volta} || o primeiro está empatado com o segundo lugar`
+
         } else {
-            div_msg.innerHTML += `<br>O priemrio colocado é ${primeiro_volta} || a diferença entre o priemrio e o segundo ${diferenca.toFixed(2)}`
+
+            div_msg.innerHTML += `<br>O primeiro colocado é ${primeiro_volta} || A diferença entre o primeiro e o segundo ${diferenca.toFixed(2)}`
+
         }
 
 
+        if (contador == qtd_voltas) {
+
+            podio();
+
+        }
+
     }
+
+}
+
+function podio() {
+
+    if (qtd_cavalos = 2) {
+
+        primeiro = colocacao[0].nome;
+        segundo = colocacao[1].nome;
+
+        div_msg_podio.innerHTML += ` Em primeiro lugar ficou ${primeiro} <br>`
+        div_msg_podio.innerHTML += ` Em segundo lugar ficou ${segundo}<br>`
+
+    } else if (qtd_cavalos = 3) {
+
+        primeiro = colocacao[0].nome;
+        segundo = colocacao[1].nome;
+        terceiro = colocacao[2].nome;
+
+        div_msg_podio.innerHTML += ` Em primeiro lugar ficou ${primeiro}<br>`
+        div_msg_podio.innerHTML += ` Em segundo lugar ficou ${segundo}<br>`
+        div_msg_podio.innerHTML += ` Em terceiro lugar ficou ${terceiro}<br>`
+
+
+    } else if (qtd_cavalos = 4) {
+
+        primeiro = colocacao[0].nome;
+        segundo = colocacao[1].nome;
+        terceiro = colocacao[2].nome;
+        quarto = colocacao[3].nome;
+
+        div_msg_podio.innerHTML += ` Em primeiro lugar ficou ${primeiro}<br>`
+        div_msg_podio.innerHTML += ` Em segundo lugar ficou ${segundo}<br>`
+        div_msg_podio.innerHTML += ` Em terceiro lugar ficou ${terceiro}<br>`
+        div_msg_podio.innerHTML += ` Em quarto lugar ficou ${quarto}<br>`
+
+    } else if (qtd_cavalos = 5) {
+
+        primeiro = colocacao[0].nome;
+        segundo = colocacao[1].nome;
+        terceiro = colocacao[2].nome;
+        quarto = colocacao[3].nome;
+        quinto = colocacao[4].nome;
+
+        div_msg_podio.innerHTML += ` Em primeiro lugar ficou ${primeiro}<br>`
+        div_msg_podio.innerHTML += ` Em segundo lugar ficou ${segundo}<br>`
+        div_msg_podio.innerHTML += ` Em terceiro lugar ficou ${terceiro}<br>`
+        div_msg_podio.innerHTML += ` Em quarto lugar ficou ${quarto}<br>`
+        div_msg_podio.innerHTML += ` Em quinto lugar ficou ${quinto}<br>`
+
+    } else if (qtd_cavalos = 6) {
+
+        primeiro = colocacao[0].nome;
+        segundo = colocacao[1].nome;
+        terceiro = colocacao[2].nome;
+        quarto = colocacao[3].nome;
+        quinto = colocacao[4].nome;
+        sexto = colocacao[5].nome;
+
+        div_msg_podio.innerHTML += ` Em primeiro lugar ficou ${primeiro}<br>`
+        div_msg_podio.innerHTML += ` Em segundo lugar ficou ${segundo}<br>`
+        div_msg_podio.innerHTML += ` Em terceiro lugar ficou ${terceiro}<br>`
+        div_msg_podio.innerHTML += ` Em quarto lugar ficou ${quarto}<br>`
+        div_msg_podio.innerHTML += ` Em quinto lugar ficou ${quinto}<br>`
+        div_msg_podio.innerHTML += ` Em quinto lugar ficou ${sexto}<br>`
+
+    }
+
+
+
 
 
 }
