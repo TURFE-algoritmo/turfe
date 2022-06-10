@@ -30,12 +30,18 @@
     var tempo_volta_cavalo_1 = (Math.random() * 2 + 7).toFixed(1);
     var tempo_volta_cavalo_2 = (Math.random() * 2 + 7).toFixed(1);
     var tempo_volta_cavalo_3 = (Math.random() * 2 + 7).toFixed(1);
+    var tempo_volta_cavalo_4 = (Math.random() * 2 + 7).toFixed(1);
+    var tempo_volta_cavalo_5 = (Math.random() * 2 + 7).toFixed(1);
+    var tempo_volta_cavalo_6 = (Math.random() * 2 + 7).toFixed(1);
     tempo_total_cavalo_1 += Number(tempo_volta_cavalo_1);
     tempo_total_cavalo_2 += Number(tempo_volta_cavalo_2);
     tempo_total_cavalo_3 += Number(tempo_volta_cavalo_3);
+    tempo_total_cavalo_4 += Number(tempo_volta_cavalo_4);
+    tempo_total_cavalo_5 += Number(tempo_volta_cavalo_5);
+    tempo_total_cavalo_6 += Number(tempo_volta_cavalo_6);
     contador++;
     div_msg.innerHTML += `
-        Volta 0${contador} <br>
+        Volta ${contador} <br>
         Cavalo01 - ${tempo_volta_cavalo_1} - ${tempo_total_cavalo_1.toFixed(
       1
     )} -
