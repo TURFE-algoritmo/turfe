@@ -1,0 +1,5 @@
+:root{
+    --corfundo: #FFFFFF;
+    --CorPrincipal: #c3c3c3;
+    --corSecundaria: #000000;
+}
