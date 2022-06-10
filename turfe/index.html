@@ -125,9 +125,6 @@
 
             alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
         }
-
-
-
     }
 
     function proximo() {
@@ -169,41 +166,40 @@
             div_msg.innerHTML += (`<br>Volta ${contador} <br>`)
 
             for (let index = 0; index < qtd_cavalos; index++) {
-                if(index == 0){
-                    div_msg.innerHTML += `${nome_cv_1} -  ${ tempo_volta_cavalo_1 } - ${
-                    tempo_total_cavalo_1.toFixed(1)}  `
-                }
-                if(index == 1){
-                    div_msg.innerHTML += `| ${nome_cv_2} -  ${ tempo_volta_cavalo_2} - ${
-                    tempo_total_cavalo_2.toFixed(1)}  `
-                }
-                if(index == 2){
-                    div_msg.innerHTML += `| ${nome_cv_3} -  ${ tempo_volta_cavalo_3} - ${
-                    tempo_total_cavalo_3.toFixed(1)}  `
-                }
-                if(index == 3){
-                    div_msg.innerHTML += `| ${nome_cv_4} -  ${ tempo_volta_cavalo_4} - ${
-                    tempo_total_cavalo_4.toFixed(1)}  `
-                }
-                if(index == 4){
-                    div_msg.innerHTML += `| ${nome_cv_5} -  ${ tempo_volta_cavalo_5} - ${
-                    tempo_total_cavalo_5.toFixed(1)}  `
+
+                if (index == 0) {
+
+                    div_msg.innerHTML += `${nome_cv_1} -  ${tempo_volta_cavalo_1} - ${tempo_total_cavalo_1.toFixed(1)}  `
                 }
 
-                if(index == 5){
-                    div_msg.innerHTML += `| ${nome_cv_6} -  ${ tempo_volta_cavalo_6} - ${
-                    tempo_total_cavalo_6.toFixed(1)}  `
+                if (index == 1) {
+
+                    div_msg.innerHTML += `| ${nome_cv_2} -  ${tempo_volta_cavalo_2} - ${tempo_total_cavalo_2.toFixed(1)}  `
+                }
+
+                if (index == 2) {
+
+                    div_msg.innerHTML += `| ${nome_cv_3} -  ${tempo_volta_cavalo_3} - ${tempo_total_cavalo_3.toFixed(1)}  `
+                }
+
+                if (index == 3) {
+
+                    div_msg.innerHTML += `| ${nome_cv_4} -  ${tempo_volta_cavalo_4} - ${tempo_total_cavalo_4.toFixed(1)}  `
+                }
+
+                if (index == 4) {
+
+                    div_msg.innerHTML += `| ${nome_cv_5} -  ${tempo_volta_cavalo_5} - ${tempo_total_cavalo_5.toFixed(1)}  `
                 }
 
 
+                if (index == 5) {
 
+                    div_msg.innerHTML += `| ${nome_cv_6} -  ${tempo_volta_cavalo_6} - ${tempo_total_cavalo_6.toFixed(1)}  `
+                }
 
 
             }
-
-            
-
-
         }
 
         // div_msg.innerHTML += `
@@ -222,110 +218,110 @@
         //         < br > <br>
         //             `;
 
-    //     if (contador == 7) {
-    //         if (
-    //             tempo_total_cavalo_1 < tempo_total_cavalo_2 &&
-    //             tempo_total_cavalo_2 < tempo_total_cavalo_3
-    //         ) {
-    //             primeiro = "Cavalo 1";
-    //             segundo = " Cavalo 2";
-    //             terceiro = "Cavalo 3";
-    //         } else if (
-    //             tempo_total_cavalo_1 < tempo_total_cavalo_3 &&
-    //             tempo_total_cavalo_3 < tempo_total_cavalo_2
-    //         ) {
-    //             primeiro = "Cavalo 1";
-    //             segundo = " Cavalo 3";
-    //             terceiro = "Cavalo 2";
-    //         } else if (
-    //             tempo_total_cavalo_2 < tempo_total_cavalo_1 &&
-    //             tempo_total_cavalo_1 < tempo_total_cavalo_3
-    //         ) {
-    //             primeiro = "Cavalo 2";
-    //             segundo = " Cavalo 1";
-    //             terceiro = "Cavalo 3";
-    //         } else if (
-    //             tempo_total_cavalo_2 < tempo_total_cavalo_3 &&
-    //             tempo_total_cavalo_3 < tempo_total_cavalo_1
-    //         ) {
-    //             primeiro = "Cavalo 2";
-    //             segundo = " Cavalo 3";
-    //             terceiro = "Cavalo 1";
-    //         } else if (
-    //             tempo_total_cavalo_3 < tempo_total_cavalo_1 &&
-    //             tempo_total_cavalo_1 < tempo_total_cavalo_2
-    //         ) {
-    //             primeiro = "Cavalo 3";
-    //             segundo = " Cavalo 1";
-    //             terceiro = "Cavalo 2";
-    //         } else {
-    //             primeiro = "Cavalo 3";
-    //             segundo = "Cavalo 2";
-    //             terceiro = "Cavalo 1";
-    //         }
-    //         div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
-    //                     Em 2º Lugar – ${segundo} <br>
-    //                         Em 3º Lugar – ${terceiro} <br>`;
+        //     if (contador == 7) {
+        //         if (
+        //             tempo_total_cavalo_1 < tempo_total_cavalo_2 &&
+        //             tempo_total_cavalo_2 < tempo_total_cavalo_3
+        //         ) {
+        //             primeiro = "Cavalo 1";
+        //             segundo = " Cavalo 2";
+        //             terceiro = "Cavalo 3";
+        //         } else if (
+        //             tempo_total_cavalo_1 < tempo_total_cavalo_3 &&
+        //             tempo_total_cavalo_3 < tempo_total_cavalo_2
+        //         ) {
+        //             primeiro = "Cavalo 1";
+        //             segundo = " Cavalo 3";
+        //             terceiro = "Cavalo 2";
+        //         } else if (
+        //             tempo_total_cavalo_2 < tempo_total_cavalo_1 &&
+        //             tempo_total_cavalo_1 < tempo_total_cavalo_3
+        //         ) {
+        //             primeiro = "Cavalo 2";
+        //             segundo = " Cavalo 1";
+        //             terceiro = "Cavalo 3";
+        //         } else if (
+        //             tempo_total_cavalo_2 < tempo_total_cavalo_3 &&
+        //             tempo_total_cavalo_3 < tempo_total_cavalo_1
+        //         ) {
+        //             primeiro = "Cavalo 2";
+        //             segundo = " Cavalo 3";
+        //             terceiro = "Cavalo 1";
+        //         } else if (
+        //             tempo_total_cavalo_3 < tempo_total_cavalo_1 &&
+        //             tempo_total_cavalo_1 < tempo_total_cavalo_2
+        //         ) {
+        //             primeiro = "Cavalo 3";
+        //             segundo = " Cavalo 1";
+        //             terceiro = "Cavalo 2";
+        //         } else {
+        //             primeiro = "Cavalo 3";
+        //             segundo = "Cavalo 2";
+        //             terceiro = "Cavalo 1";
+        //         }
+        //         div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
+        //                     Em 2º Lugar – ${segundo} <br>
+        //                         Em 3º Lugar – ${terceiro} <br>`;
 
-    //         //   div_msg.innerHTML = ``
-    //         //   div_msg2.innerHTML = ``
+        //         //   div_msg.innerHTML = ``
+        //         //   div_msg2.innerHTML = ``
 
-    //         if (
-    //             tempo_total_cavalo_1 == tempo_total_cavalo_2 &&
-    //             tempo_total_cavalo_1 < tempo_total_cavalo_3
-    //         ) {
-    //             primeiro = "Cavalo 1 e Cavalo 2";
-    //             segundo = "Cavalo3";
-    //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
-    //                                 Em 2º Lugar – ${segundo}`;
-    //         } else if (
-    //             tempo_total_cavalo_1 == tempo_total_cavalo_2 &&
-    //             tempo_total_cavalo_1 > tempo_total_cavalo_3
-    //         ) {
-    //             segundo = "Cavalo 1 e Cavalo 2";
-    //             primeiro = "Cavalo3";
-    //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
-    //                                     Em 2º Lugar – ${segundo}`;
-    //         } else if (
-    //             tempo_total_cavalo2 == tempo_total_cavalo_3 &&
-    //             tempo_total_cavalo_2 < tempo_total_cavalo_1
-    //         ) {
-    //             primeiro = "Cavalo 2 e Cavalo 3";
-    //             segundo = "Cavalo1";
-    //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
-    //                                         Em 2º Lugar – ${segundo}`;
-    //         } else if (
-    //             tempo_total_cavalo2 == tempo_total_cavalo_3 &&
-    //             tempo_total_cavalo_2 > tempo_total_cavalo_1
-    //         ) {
-    //             segundo = "Cavalo 2 e Cavalo 3";
-    //             primeiro = "Cavalo1";
-    //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
-    //                                             Em 2º Lugar – ${segundo}`;
-    //         } else if (
-    //             tempo_total_cavalo3 == tempo_total_cavalo_1 &&
-    //             tempo_total_cavalo_1 < tempo_total_cavalo_2
-    //         ) {
-    //             primeiro = "Cavalo 1 e Cavalo 3";
-    //             segundo = "Cavalo2";
-    //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
-    //                                                 Em 2º Lugar – ${segundo}`;
-    //         } else if (
-    //             tempo_total_cavalo3 == tempo_total_cavalo_1 &&
-    //             tempo_total_cavalo_1 > tempo_total_cavalo_2
-    //         ) {
-    //             segundo = "Cavalo 1 e Cavalo 3";
-    //             primeiro = "Cavalo2";
-    //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
-    //                                                     Em 2º Lugar – ${segundo}`;
-    //         }
-    //     }
+        //         if (
+        //             tempo_total_cavalo_1 == tempo_total_cavalo_2 &&
+        //             tempo_total_cavalo_1 < tempo_total_cavalo_3
+        //         ) {
+        //             primeiro = "Cavalo 1 e Cavalo 2";
+        //             segundo = "Cavalo3";
+        //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
+        //                                 Em 2º Lugar – ${segundo}`;
+        //         } else if (
+        //             tempo_total_cavalo_1 == tempo_total_cavalo_2 &&
+        //             tempo_total_cavalo_1 > tempo_total_cavalo_3
+        //         ) {
+        //             segundo = "Cavalo 1 e Cavalo 2";
+        //             primeiro = "Cavalo3";
+        //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
+        //                                     Em 2º Lugar – ${segundo}`;
+        //         } else if (
+        //             tempo_total_cavalo2 == tempo_total_cavalo_3 &&
+        //             tempo_total_cavalo_2 < tempo_total_cavalo_1
+        //         ) {
+        //             primeiro = "Cavalo 2 e Cavalo 3";
+        //             segundo = "Cavalo1";
+        //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
+        //                                         Em 2º Lugar – ${segundo}`;
+        //         } else if (
+        //             tempo_total_cavalo2 == tempo_total_cavalo_3 &&
+        //             tempo_total_cavalo_2 > tempo_total_cavalo_1
+        //         ) {
+        //             segundo = "Cavalo 2 e Cavalo 3";
+        //             primeiro = "Cavalo1";
+        //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
+        //                                             Em 2º Lugar – ${segundo}`;
+        //         } else if (
+        //             tempo_total_cavalo3 == tempo_total_cavalo_1 &&
+        //             tempo_total_cavalo_1 < tempo_total_cavalo_2
+        //         ) {
+        //             primeiro = "Cavalo 1 e Cavalo 3";
+        //             segundo = "Cavalo2";
+        //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
+        //                                                 Em 2º Lugar – ${segundo}`;
+        //         } else if (
+        //             tempo_total_cavalo3 == tempo_total_cavalo_1 &&
+        //             tempo_total_cavalo_1 > tempo_total_cavalo_2
+        //         ) {
+        //             segundo = "Cavalo 1 e Cavalo 3";
+        //             primeiro = "Cavalo2";
+        //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
+        //                                                     Em 2º Lugar – ${segundo}`;
+        //         }
+        //     }
 
-    //     if (contador > 7) {
-    //         contador = 0;
-    //         div_msg2.innerHTML = ``;
-    //         div_msg.innerHTML = ``;
-    //     }
+        //     if (contador > 7) {
+        //         contador = 0;
+        //         div_msg2.innerHTML = ``;
+        //         div_msg.innerHTML = ``;
+        //     }
 
     }
 </script>
