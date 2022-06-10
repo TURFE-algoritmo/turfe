@@ -13,7 +13,7 @@ body {
   line-height: 1.42em;
   color:#A7A1AE;
   background-color:#1F2739;
-  background: url(./img/bannerTable.jpg);
+  background: url(./img/BannerTable.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,7 +22,7 @@ body {
 
 h1 {
   font-size:3em; 
-  font-weight: 300;
+  font-weight: 800;
   line-height:1em;
   text-align: center;
   color: #4DC3FA;
@@ -52,7 +52,7 @@ h2 a {
 	  font-weight: bold;
 	  font-size: 1em;
   text-align: left;
-  color: #185875;
+  color: rgb(200, 238, 240);
 }
 
 .container td {
@@ -82,19 +82,19 @@ h2 a {
 
 /* Background-color of the odd rows */
 .container tr:nth-child(odd) {
-	  background-color: #323C50;
+	  background-color: var(--CorPrincipal);
 }
 
 /* Background-color of the even rows */
 .container tr:nth-child(even) {
-	  background-color: #2C3446;
+	  background-color: var(--corSecundaria);
 }
 
 .container th {
 	  background-color: #1F2739;
 }
 
-.container td:first-child { color: #FB667A; }
+.container td:first-child { color: #e9e9e9; font-weight: 400; }
 
 .container tr:hover {
    background-color: #464A52;
@@ -120,4 +120,48 @@ h2 a {
 @media (max-width: 800px) {
 .container td:nth-child(4),
 .container th:nth-child(4) { display: none; }
+}
+.button-28 {
+  appearance: none;
+  background-color: #1F2739;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color:rgb(200, 238, 240);
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;  
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 90.6%;
+  margin-top: 15px;
+  position: absolute;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #323f5c;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
