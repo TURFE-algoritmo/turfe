@@ -9,21 +9,92 @@
 <body>
     <b>Turfe do Amigo</b> <br />
     <!-- quantidade de cavalos -->
-    digite a quantidade de cavalos
-    <input type="text" id="qtd_cavalos">
-    <!-- numero do cavalo -->
-    insira o numero do cavalo
-    <input type="text" id="numero_cavalo">
-    <!-- nome do cavalo -->
-    nome do cavalo
-    <input type="text" id="nome_cavalo">
+    <div>
 
+        digite a quantidade de cavalos
+        <select name="" id="qtd_cavalos">
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+        </select>
+        <button onclick="on_qtd_cavalos()">Quantidade de cavalos</button>
+    </div>
+    <div>
+
+        <!-- numero do cavalo -->
+        insira o numero do cavalo que voce quer alterar o nome
+        <select name="" id="numero_cavalo">
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+        </select>
+        
+        <!-- nome do cavalo -->
+        nome do cavalo
+        <input type="text" id="nome_cavalo">
+        
+        <!-- botão para adicionar -->
+        <button onclick="adicionar_nome()">Adicionar nome</button>
+    </div>
+<div>
+
+    <!-- quantidade de voltas do turfe -->
+    insira a quantidade de voltas do seu turfe
+    <input type="text" id="qtd_voltas">
+    <button onclick="on_qtd_voltas()">Adicionar voltas</button>
+</div>
+<div>
+
+    
     <!--  -->
     <button onclick="volta()">Dar uma Volta</button> <br />
     <div id="div_msg"></div>
     <br /><br />
     <div id="div_msg_cavalo"></div>
     <div id="div_msg_volta"></div>
-
+</div>
+    
 </body>
 </html>
+
+<script>
+    var qtd_cavalos = 0;
+    var qtd_voltas = qtd_voltas.value;
+
+    var nome_cv_1 = '';
+    var nome_cv_2 = '';
+    var nome_cv_3 = '';
+    var nome_cv_4 = '';
+    var nome_cv_5 = '';
+    var nome_cv_6 = '';
+
+    var tempo_total_cavalo_1 = 0;
+  var tempo_total_cavalo_2 = 0;
+  var tempo_total_cavalo_3 = 0;
+  var tempo_total_cavalo_4 = 0;
+  var tempo_total_cavalo_5 = 0;
+  var tempo_total_cavalo_6 = 0;
+
+  function on_qtd_cavalos(){
+    var qtd_cavalos = qtd_cavalos.value;
+    alert('a quantidade de cavalos será '+ qtd_cavalos)
+      
+  }
+
+  function adicionar_nome(){
+
+  }
+
+  function on_qtd_voltas(){
+      
+  }
+
+  function volta(){
+      
+  }
+</script>
