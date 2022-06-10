@@ -27,12 +27,41 @@ var contador = 0;
 // FUNÇÕES
 
 function on_qtd_cavalos() {
-
     qtd_cavalos = Number(slt_qtd_cavalos.value);
+    if(qtd_cavalos != 0){
+
     alert(`A quantidade de cavalos será ${qtd_cavalos} `);
+
 
     parte1.style.display = 'none'
     parte2.style.display = 'block'
+
+    if (qtd_cavalos == 3) {
+
+        num_cav3.style.display = "block"
+
+
+    } else if (qtd_cavalos == 4) {
+
+        num_cav3.style.display = "block"
+        num_cav4.style.display = "block"
+
+    } else if (qtd_cavalos == 5) {
+
+        num_cav3.style.display = "block"
+        num_cav4.style.display = "block"
+        num_cav5.style.display = "block"
+    } else if (qtd_cavalos == 6) {
+
+        num_cav3.style.display = "block"
+        num_cav4.style.display = "block"
+        num_cav5.style.display = "block"
+        num_cav6.style.display = "block"
+
+    }
+    }else{
+        alert('insira uma quantidade valida')
+    }
 
 }
 
@@ -77,7 +106,6 @@ function adicionar_nome() {
 }
 
 function proximo() {
-
     parte2.style.display = 'none'
     parte3.style.display = 'block'
 
@@ -85,9 +113,12 @@ function proximo() {
 
 function on_qtd_voltas() {
     qtd_voltas = Number(slc_qtd_voltas.value);
-
-    parte3.style.display = 'none'
-    parte4.style.display = 'block'
+    if(qtd_voltas != 0){
+        parte3.style.display = 'none'
+        parte4.style.display = 'block'
+    }else{
+        alert("insira a quantidade de voltas")
+    }
 
 
 }
@@ -187,7 +218,7 @@ function volta() {
 
 function podio() {
 
-    if (qtd_cavalos = 2) {
+    if (qtd_cavalos == 2) {
 
         primeiro = colocacao[0].nome;
         segundo = colocacao[1].nome;
@@ -195,7 +226,7 @@ function podio() {
         div_msg_podio.innerHTML += ` Em primeiro lugar ficou ${primeiro} <br>`
         div_msg_podio.innerHTML += ` Em segundo lugar ficou ${segundo}<br>`
 
-    } else if (qtd_cavalos = 3) {
+    } else if (qtd_cavalos == 3) {
 
         primeiro = colocacao[0].nome;
         segundo = colocacao[1].nome;
@@ -206,7 +237,7 @@ function podio() {
         div_msg_podio.innerHTML += ` Em terceiro lugar ficou ${terceiro}<br>`
 
 
-    } else if (qtd_cavalos = 4) {
+    } else if (qtd_cavalos == 4) {
 
         primeiro = colocacao[0].nome;
         segundo = colocacao[1].nome;
@@ -218,7 +249,7 @@ function podio() {
         div_msg_podio.innerHTML += ` Em terceiro lugar ficou ${terceiro}<br>`
         div_msg_podio.innerHTML += ` Em quarto lugar ficou ${quarto}<br>`
 
-    } else if (qtd_cavalos = 5) {
+    } else if (qtd_cavalos == 5) {
 
         primeiro = colocacao[0].nome;
         segundo = colocacao[1].nome;
@@ -232,7 +263,7 @@ function podio() {
         div_msg_podio.innerHTML += ` Em quarto lugar ficou ${quarto}<br>`
         div_msg_podio.innerHTML += ` Em quinto lugar ficou ${quinto}<br>`
 
-    } else if (qtd_cavalos = 6) {
+    } else if (qtd_cavalos == 6) {
 
         primeiro = colocacao[0].nome;
         segundo = colocacao[1].nome;
