@@ -104,11 +104,11 @@ h2 a {
 }
 
 .container td:hover {
-  background-color: #FFF842;
-  color: #403E10;
+  background-color: #3d9ac5b4;
+  color: #ffffff;
   font-weight: bold;
   
-  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+  box-shadow: #195d7c -1px 1px, #3d9ac5b4 -2px 2px, #3d9ac5b4 -3px 3px, #3d9ac5b4 -4px 4px, #3d9ac5b4 -5px 5px, #3d9ac5b4 -6px 6px;
   transform: translate3d(6px, -6px, 0);
   
   transition-delay: 0s;
@@ -122,6 +122,7 @@ h2 a {
 .container th:nth-child(4) { display: none; }
 }
 .button-28 {
+  border: 1px solid transparent;
   appearance: none;
   background-color: #1F2739;
   border-radius: 15px;
@@ -157,8 +158,8 @@ h2 a {
 .button-28:hover {
   color: #fff;
   background-color: #323f5c;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-2px);
+  box-shadow: #195d7c -1px 1px, #3d9ac5b4 -2px 2px, #3d9ac5b4 -3px 3px, #3d9ac5b4 -4px 4px, #3d9ac5b4 -5px 5px, #3d9ac5b4 -6px 6px;
+  transform: translate3d(2px, -2px, 0);
 }
 
 .button-28:active {
