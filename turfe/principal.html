@@ -16,6 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="principal">
     <h1><span class="blue"></span>Turfe Horse<span class="blue"></span> <span class="yellow"></pan></h1>
         <!-- <h2>Created with love by <a href="https://github.com/pablorgarcia" target="_blank">Pablo García</a></h2> -->
              
@@ -26,8 +27,8 @@
                 <tr>
                     <th><h1>Primeiro Colocado:<span id="primeiro_colocado"></span> </h1></th>
                     <th><h1>Diferença:<span id="diferencas"></span> </h1></th>
-                    <th></th>   
-                    <th><button onclick="volta()" class="button-28" role="button">Rodada</button></th>   
+                    <th><button onclick="volta()" class="button-28" role="button">Volta</button></th>   
+                    <th><button onclick="podium()" class="button-28" role="button">Podio</button></th>   
                 </tr>
                 <tr>
                     <th><h1>Cavalos</h1></th>
@@ -76,6 +77,48 @@
             </tbody>
         </table>
     </section>
+</div>
 
+
+<div id="podioo" style="display: none;">
+    <section class="div__pai--podium">
+        <section class="div__sec--podium--menor">2°</section>
+        <section class="div__sec--podium">
+            <p id="segundo_col">Segundo Colocado</p>
+            <img src="./CSS/img/cavaloPodium2.jpg" alt="" class="img__podium--menor">
+        </section>
+        
+        <section class="div__prim--podium--menor">1°</section>
+        <section class="div__prim--podium">
+            <p id="primeiro_col">Primeiro Colocado</p>
+            <img src="./CSS/img/cavaloPodium3.jpg" alt="" class="img__podium--maior">
+        </section>
+
+        <section class="div__tec--podium--menor">3°</section>
+        <section class="div__tec--podium">
+            <p id="terceiro_col">Terceiro Colocado</p> 
+            <img src="./CSS/img/cavaloPodium1.jpg" alt="" class="img__podium--menor">
+        </section>
+    </section>
+    
+    <section class="div__pai--outrosColocados">
+        <section class="div__outros--colocados">
+            <div>4°</div>
+            <div id="quarto_col">Nome</div>
+        </section>
+
+        <section class="div__outros--colocados">
+            <div>5°</div>
+            <div id="quinto_col">Nome</div>
+        </section>
+
+        <section class="div__outros--colocados">
+            <div>6°</div>
+            <div id="sexto_col">Nome</div>
+        </section>
+    </section>
+
+    
+</div>
 </body>
 </html>
