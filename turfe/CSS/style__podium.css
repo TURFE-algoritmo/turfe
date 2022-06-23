@@ -11,9 +11,9 @@
   --bronze : #AC7D18;
 }
 
-body {
+/* body {
   background: var(--grey);
-}
+} */
 
 .div__pai--podium {
   width: 100vw;
