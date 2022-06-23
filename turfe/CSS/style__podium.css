@@ -11,6 +11,10 @@
   --bronze : #AC7D18;
 }
 
+body {
+  background: var(--grey);
+}
+
 .div__pai--podium {
   width: 100vw;
   display: flex;
@@ -127,8 +131,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-left: 0.5%;
-  padding-right: 0.5%;
+  padding-left: 3%;
+  padding-right: 3%;
   width: 80vw;
   height: 10vh;
   margin-top: 2vh;
@@ -139,4 +143,15 @@
   background: #ffffff;
   box-shadow: inset 5px -5px 100px #ebebeb,
             inset -5px 5px 100px #ffffff;
+}
+
+.img__podium--maior {
+  width: 200px;
+  border-radius: 10px;
+  margin-left: 10%;
+}
+
+.img__podium--menor {
+  width: 70px;
+  border-radius: 10px;
 }
