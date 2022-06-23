@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,113 +13,129 @@
     <link rel="stylesheet" href="./CSS/style__placar.css">
     <link rel="stylesheet" href="./CSS/root.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Ubuntu&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div id="principal">
-    <h1><span class="blue"></span>Turfe Horse<span class="blue"></span> <span class="yellow"></pan></h1>
+        <h1><span class="blue"></span>Turfe Horse<span class="blue"></span> <span class="yellow"></pan>
+        </h1>
         <!-- <h2>Created with love by <a href="https://github.com/pablorgarcia" target="_blank">Pablo García</a></h2> -->
-             
-    <section class="img__fundo"> 
-<br>
-        <table class="container">
-            <thead>
-                <tr>
-                    <th><h1>Primeiro Colocado:<span id="primeiro_colocado"></span> </h1></th>
-                    <th><h1>Diferença:<span id="diferencas"></span> </h1></th>
-                    <th><button onclick="volta()" class="button-28" role="button">Volta</button></th>   
-                    <th><button onclick="podium()" class="button-28" role="button">Podio</button></th>   
-                </tr>
-                <tr>
-                    <th><h1>Cavalos</h1></th>
-                    <th><h1>Volta</h1></th>
-                    <th><h1>Tempo por volta</h1></th>
-                    <th><h1>Tempo total</h1></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span id="nome1"></span></td>
-                    <td><span id="volta_CV_1"></span></td>
-                    <td><span id="tempo_CV1_VT"></td>
-                    <td><span id="tempo_CV1_TT"></td>
-                </tr>
-                <tr>
-                    <td><span id="nome2"></span></td>
-                    <td><span id="volta_CV_2"></span></td>
-                    <td><span id="tempo_CV2_VT"></span></td>
-                    <td><span id="tempo_CV2_TT"></td>
-                </tr>
-                <tr>
-                    <td><span id="nome3"></span></td>
-                    <td><span id="volta_CV_3"></span></td>
-                    <td><span id="tempo_CV3_VT"></span></td>
-                    <td><span id="tempo_CV3_TT"></td>
-                </tr>
-            <tr>
-                    <td><span id="nome4"></span></td>
-                    <td><span id="volta_CV_4"></span></td>
-                    <td><span id="tempo_CV4_VT"></span></td>
-                    <td><span id="tempo_CV4_TT"></td>
-                </tr>
-            <tr>
-                    <td><span id="nome5"></span></td>
-                    <td><span id="volta_CV_5"></span></td>
-                    <td><span id="tempo_CV5_VT"></span></td>
-                    <td><span id="tempo_CV5_TT"></td>
-                </tr>
-            <tr>
-                    <td><span id="nome6"></span></td>
-                    <td><span id="volta_CV_6"></span></td>
-                    <td><span id="tempo_CV6_VT"></span></td>
-                    <td><span id="tempo_CV6_TT"></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-</div>
+
+        <section class="img__fundo">
+            <br>
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th>
+                            <h1>Primeiro Colocado:<span id="primeiro_colocado"></span> </h1>
+                        </th>
+                        <th>
+                            <h1>Diferença:<span id="diferencas"></span> </h1>
+                        </th>
+                        <th><button onclick="volta()" class="button-28" role="button">Volta</button></th>
+                        <th><button onclick="podium()" class="button-28" role="button">Podio</button></th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <h1>Cavalos</h1>
+                        </th>
+                        <th>
+                            <h1>Volta</h1>
+                        </th>
+                        <th>
+                            <h1>Tempo por volta</h1>
+                        </th>
+                        <th>
+                            <h1>Tempo total</h1>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span id="nome1"></span></td>
+                        <td><span id="volta_CV_1"></span></td>
+                        <td><span id="tempo_CV1_VT"></td>
+                        <td><span id="tempo_CV1_TT"></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome2"></span></td>
+                        <td><span id="volta_CV_2"></span></td>
+                        <td><span id="tempo_CV2_VT"></span></td>
+                        <td><span id="tempo_CV2_TT"></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome3"></span></td>
+                        <td><span id="volta_CV_3"></span></td>
+                        <td><span id="tempo_CV3_VT"></span></td>
+                        <td><span id="tempo_CV3_TT"></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome4"></span></td>
+                        <td><span id="volta_CV_4"></span></td>
+                        <td><span id="tempo_CV4_VT"></span></td>
+                        <td><span id="tempo_CV4_TT"></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome5"></span></td>
+                        <td><span id="volta_CV_5"></span></td>
+                        <td><span id="tempo_CV5_VT"></span></td>
+                        <td><span id="tempo_CV5_TT"></td>
+                    </tr>
+                    <tr>
+                        <td><span id="nome6"></span></td>
+                        <td><span id="volta_CV_6"></span></td>
+                        <td><span id="tempo_CV6_VT"></span></td>
+                        <td><span id="tempo_CV6_TT"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
 
 
-<div id="podioo" style="display: none;">
-    <section class="div__pai--podium">
-        <section class="div__sec--podium--menor">2°</section>
-        <section class="div__sec--podium">
-            <p id="segundo_col">Segundo Colocado</p>
-            <img src="./CSS/img/cavaloPodium2.jpg" alt="" class="img__podium--menor">
-        </section>
-        
-        <section class="div__prim--podium--menor">1°</section>
-        <section class="div__prim--podium">
-            <p id="primeiro_col">Primeiro Colocado</p>
-            <img src="./CSS/img/cavaloPodium3.jpg" alt="" class="img__podium--maior">
+    <div id="podioo" style="display: none;">
+        <section class="div__pai--podium">
+            <section class="div__sec--podium--menor">2°</section>
+            <section class="div__sec--podium">
+                <p id="segundo_col">Segundo Colocado</p>
+                <img src="./CSS/img/cavaloPodium2.jpg" alt="" class="img__podium--menor">
+            </section>
+
+            <section class="div__prim--podium--menor">1°</section>
+            <section class="div__prim--podium">
+                <p id="primeiro_col">Primeiro Colocado</p>
+                <img src="./CSS/img/cavaloPodium3.jpg" alt="" class="img__podium--maior">
+            </section>
+
+            <section class="div__tec--podium--menor">3°</section>
+            <section class="div__tec--podium">
+                <p id="terceiro_col">Terceiro Colocado</p>
+                <img src="./CSS/img/cavaloPodium1.jpg" alt="" class="img__podium--menor">
+            </section>
         </section>
 
-        <section class="div__tec--podium--menor">3°</section>
-        <section class="div__tec--podium">
-            <p id="terceiro_col">Terceiro Colocado</p> 
-            <img src="./CSS/img/cavaloPodium1.jpg" alt="" class="img__podium--menor">
-        </section>
-    </section>
-    
-    <section class="div__pai--outrosColocados">
-        <section class="div__outros--colocados">
-            <div>4°</div>
-            <div id="quarto_col">Nome</div>
+        <section class="div__pai--outrosColocados">
+            <section class="div__outros--colocados">
+                <div>4°</div>
+                <div id="quarto_col">Nome</div>
+            </section>
+
+            <section class="div__outros--colocados">
+                <div>5°</div>
+                <div id="quinto_col">Nome</div>
+            </section>
+
+            <section class="div__outros--colocados">
+                <div>6°</div>
+                <div id="sexto_col">Nome</div>
+            </section>
         </section>
 
-        <section class="div__outros--colocados">
-            <div>5°</div>
-            <div id="quinto_col">Nome</div>
-        </section>
 
-        <section class="div__outros--colocados">
-            <div>6°</div>
-            <div id="sexto_col">Nome</div>
-        </section>
-    </section>
-
-    
-</div>
+    </div>
 </body>
+
 </html>

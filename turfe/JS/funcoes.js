@@ -61,7 +61,7 @@ function on_qtd_cavalos() {
 
         }
     } else {
-        alert('insira uma quantidade valida')
+        alert('Insira uma quantidade valida')
     }
 
 }
@@ -126,7 +126,7 @@ function on_qtd_voltas() {
         window.location.href = "./principal.html";
 
     } else {
-        alert("insira a quantidade de voltas")
+        alert("Insira a quantidade de voltas")
     }
 }
 

@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="JS/funcoes.js"></script>
-    <title>Inicio</title>
-    <link rel="stylesheet" href="./CSS/reset.css" />
-    <!-- <link rel="stylesheet" href="./CSS/style__podium.css">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="JS/funcoes.js"></script>
+  <title>Inicio</title>
+  <link rel="stylesheet" href="./CSS/reset.css" />
+  <!-- <link rel="stylesheet" href="./CSS/style__podium.css">
     <link rel="stylesheet" href="./CSS/style__placar.css">
     <link rel="stylesheet" href="./CSS/root.css"> -->
-    <link rel="stylesheet" href="CSS/style__index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Ubuntu&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div class="box">
-      <div class="box-titulo">
-        <label>Turfe Horse</label>
-      </div>
-      <div class="box-margin">
-        <!-- quantidade de cavalos -->
-        <div id="parte1" class="parte1">
-          <div class="box-itens">
-            <div class="juntos">
-              <label>Selecione a quantidade de cavalos</label>
-              <select id="slt_qtd_cavalos">
-                <option value="0">Selecione a quantidade</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
-            </div>
-            <button onclick="on_qtd_cavalos()">Quantidade de cavalos</button>
-          </div>
-        </div>
+  <link rel="stylesheet" href="CSS/style__index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
 
-        <div id="parte2" style="display: none">
-          <div class="box2">
-            <!-- numero do cavalo -->
-            <div class="numero-cavalo">
+<body>
+  <div class="box">
+    <div class="box-titulo">
+      <label>Turfe Horse</label>
+    </div>
+    <div class="box-margin">
+      <!-- quantidade de cavalos -->
+      <div id="parte1" class="parte1">
+        <div class="box-itens">
+          <div class="juntos">
+            <label>Selecione a quantidade de cavalos</label>
+            <select id="slt_qtd_cavalos">
+              <option value="0">Selecione a quantidade</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <button onclick="on_qtd_cavalos()">Quantidade de cavalos</button>
+        </div>
+      </div>
+
+      <div id="parte2" style="display: none">
+        <div class="box2">
+          <!-- numero do cavalo -->
+          <div class="numero-cavalo">
             <label> Selecione o número do cavalo para alterar o nome</label>
 
             <select id="numero_cavalo">
@@ -53,46 +55,47 @@
               <option value="5" style="display: none" id="num_cav5">5</option>
               <option value="6" style="display: none" id="num_cav6">6</option>
             </select>
-        </div>
-            <!-- nome do cavalo -->
-            <div class="nome">
-              <label>Nome do cavalo</label>
-              <div class="nome-cavalo">
+          </div>
+          <!-- nome do cavalo -->
+          <div class="nome">
+            <label>Nome do cavalo</label>
+            <div class="nome-cavalo">
               <input type="text" id="nome_cavalo" />
 
               <!-- botão para adicionar -->
               <button onclick="adicionar_nome()">Adicionar nome</button>
             </div>
-             </div>
-            <button onclick="proximo()">Proxima parte</button>
           </div>
-        </div>
-
-
-
-        <div id="parte3" style="display: none">
-          <!-- quantidade de voltas do turfe -->
-          <div class="box3">
-          <label>Insira a quantidade de voltas do seu turfe</label>
-          <div class="voltas">
-          <input type="number" id="slc_qtd_voltas" />
-          <button onclick="on_qtd_voltas()">Adicionar voltas</button>
-        </div>
-            </div>
-        </div>
-
-
-        <div id="parte4" style="display: none">
-            <div class="botao">
-          <button onclick="volta()">Dar uma Volta</button> <br />
-         </div>
-          <div id="div_msg"></div>
-          <br /><br />
-          <div id="div_msg_cavalo"></div>
-          <div id="div_msg_volta"></div>
-          <div id="div_msg_podio"></div>
+          <button onclick="proximo()">Proxima parte</button>
         </div>
       </div>
+
+
+
+      <div id="parte3" style="display: none">
+        <!-- quantidade de voltas do turfe -->
+        <div class="box3">
+          <label>Insira a quantidade de voltas do seu turfe</label>
+          <div class="voltas">
+            <input type="number" id="slc_qtd_voltas" />
+            <button onclick="on_qtd_voltas()">Adicionar voltas</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="parte4" style="display: none">
+        <div class="botao">
+          <button onclick="volta()">Dar uma Volta</button> <br />
+        </div>
+        <div id="div_msg"></div>
+        <br /><br />
+        <div id="div_msg_cavalo"></div>
+        <div id="div_msg_volta"></div>
+        <div id="div_msg_podio"></div>
+      </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
