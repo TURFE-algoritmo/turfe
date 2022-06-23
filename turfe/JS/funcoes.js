@@ -75,44 +75,44 @@ function adicionar_nome() {
 
         nome_cv_1 = nome;
         sessionStorage.nome_cv_1 = nome_cv_1
-        alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+        alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
     } else if (nr_cavalo == 2) {
 
         nome_cv_2 = nome;
         sessionStorage.nome_cv_2 = nome_cv_2
-
-        alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+        alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
     } else if (nr_cavalo == 3) {
 
         nome_cv_3 = nome;
         sessionStorage.nome_cv_3 = nome_cv_3
-        alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+        alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
     } else if (nr_cavalo == 4) {
 
         nome_cv_4 = nome;
         sessionStorage.nome_cv_4 = nome_cv_4
-        alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+        alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
     } else if (nr_cavalo == 5) {
 
         nome_cv_5 = nome;
         sessionStorage.nome_cv_5 = nome_cv_5
-        alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+        alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
     } else if (nr_cavalo == 6) {
 
         nome_cv_6 = nome;
         sessionStorage.nome_cv_6 = nome_cv_6
-        alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+        alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
     }
 
     nome_cavalo.value = ''
 }
 
 function proximo() {
+
     parte2.style.display = 'none'
     parte3.style.display = 'block'
 
@@ -122,18 +122,15 @@ function on_qtd_voltas() {
     qtd_voltas = Number(slc_qtd_voltas.value);
     sessionStorage.qtd_voltas = qtd_voltas
     if (qtd_voltas != 0) {
-        // parte3.style.display = 'none'
-        // parte4.style.display = 'block'
+
         window.location.href = "./principal.html";
+
     } else {
         alert("insira a quantidade de voltas")
     }
-
-
 }
 
 function volta() {
-
 
     if (contador <= sessionStorage.qtd_voltas) {
 
@@ -218,6 +215,7 @@ function volta() {
             }
 
         }
+
         colocacao.sort(GetSortOrder("tep"));
         console.log(JSON.stringify(colocacao.sort(GetSortOrder("tep"))));
         var primeiro_volta = colocacao[0].nome
@@ -226,6 +224,7 @@ function volta() {
         var temp_segundo = colocacao[1].tep;
         var diferenca = temp_segundo - temp_primeiro;
         console.log(diferenca)
+
         if (diferenca == 0) {
 
             primeiro_colocado.innerHTML = `${primeiro_volta}`
@@ -235,24 +234,23 @@ function volta() {
 
             primeiro_colocado.innerHTML = `${primeiro_volta}`
             diferencas.innerHTML = ` ${diferenca.toFixed(2)}`
-
         }
-
-
-
     }
+
     ++contador;
 
 }
 
 function podium() {
+
     if (contador >= sessionStorage.qtd_voltas) {
+
         principal.style.display = 'none'
         podioo.style.display = 'block'
         podio();
 
-
     } else {
+
         alert('a corrida ainda não acabou')
     }
 
@@ -322,11 +320,6 @@ function podio() {
         sexto_col.innerHTML = ` ${sexto}`
 
     }
-
-
-
-
-
 }
 
 function GetSortOrder(prop) {
@@ -338,129 +331,4 @@ function GetSortOrder(prop) {
         }
         return 0;
     }
-}
-
-
-
-function lixo() {
-    // div_msg.innerHTML += `
-    // Volta 0${ contador } < br >
-    //         Cavalo01 - ${ tempo_volta_cavalo_1 } - ${
-    //             tempo_total_cavalo_1.toFixed(
-    //                 1
-    //             )
-    //         } -
-    //         Cavalo02 - ${ tempo_volta_cavalo_2 } - ${
-    //             tempo_total_cavalo_2.toFixed(
-    //                 1
-    //             )
-    //         } -
-    //         Cavalo03 - ${ tempo_volta_cavalo_3 } - ${ tempo_total_cavalo_3.toFixed(1) }
-    //         < br > <br>
-    //             `;
-
-    //     if (contador == 7) {
-    //         if (
-    //             tempo_total_cavalo_1 < tempo_total_cavalo_2 &&
-    //             tempo_total_cavalo_2 < tempo_total_cavalo_3
-    //         ) {
-    //             primeiro = "Cavalo 1";
-    //             segundo = " Cavalo 2";
-    //             terceiro = "Cavalo 3";
-    //         } else if (
-    //             tempo_total_cavalo_1 < tempo_total_cavalo_3 &&
-    //             tempo_total_cavalo_3 < tempo_total_cavalo_2
-    //         ) {
-    //             primeiro = "Cavalo 1";
-    //             segundo = " Cavalo 3";
-    //             terceiro = "Cavalo 2";
-    //         } else if (
-    //             tempo_total_cavalo_2 < tempo_total_cavalo_1 &&
-    //             tempo_total_cavalo_1 < tempo_total_cavalo_3
-    //         ) {
-    //             primeiro = "Cavalo 2";
-    //             segundo = " Cavalo 1";
-    //             terceiro = "Cavalo 3";
-    //         } else if (
-    //             tempo_total_cavalo_2 < tempo_total_cavalo_3 &&
-    //             tempo_total_cavalo_3 < tempo_total_cavalo_1
-    //         ) {
-    //             primeiro = "Cavalo 2";
-    //             segundo = " Cavalo 3";
-    //             terceiro = "Cavalo 1";
-    //         } else if (
-    //             tempo_total_cavalo_3 < tempo_total_cavalo_1 &&
-    //             tempo_total_cavalo_1 < tempo_total_cavalo_2
-    //         ) {
-    //             primeiro = "Cavalo 3";
-    //             segundo = " Cavalo 1";
-    //             terceiro = "Cavalo 2";
-    //         } else {
-    //             primeiro = "Cavalo 3";
-    //             segundo = "Cavalo 2";
-    //             terceiro = "Cavalo 1";
-    //         }
-    //         div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
-    //                     Em 2º Lugar – ${segundo} <br>
-    //                         Em 3º Lugar – ${terceiro} <br>`;
-
-    //         //   div_msg.innerHTML = ``
-    //         //   div_msg2.innerHTML = ``
-
-    //         if (
-    //             tempo_total_cavalo_1 == tempo_total_cavalo_2 &&
-    //             tempo_total_cavalo_1 < tempo_total_cavalo_3
-    //         ) {
-    //             primeiro = "Cavalo 1 e Cavalo 2";
-    //             segundo = "Cavalo3";
-    //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
-    //                                 Em 2º Lugar – ${segundo}`;
-    //         } else if (
-    //             tempo_total_cavalo_1 == tempo_total_cavalo_2 &&
-    //             tempo_total_cavalo_1 > tempo_total_cavalo_3
-    //         ) {
-    //             segundo = "Cavalo 1 e Cavalo 2";
-    //             primeiro = "Cavalo3";
-    //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
-    //                                     Em 2º Lugar – ${segundo}`;
-    //         } else if (
-    //             tempo_total_cavalo2 == tempo_total_cavalo_3 &&
-    //             tempo_total_cavalo_2 < tempo_total_cavalo_1
-    //         ) {
-    //             primeiro = "Cavalo 2 e Cavalo 3";
-    //             segundo = "Cavalo1";
-    //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
-    //                                         Em 2º Lugar – ${segundo}`;
-    //         } else if (
-    //             tempo_total_cavalo2 == tempo_total_cavalo_3 &&
-    //             tempo_total_cavalo_2 > tempo_total_cavalo_1
-    //         ) {
-    //             segundo = "Cavalo 2 e Cavalo 3";
-    //             primeiro = "Cavalo1";
-    //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
-    //                                             Em 2º Lugar – ${segundo}`;
-    //         } else if (
-    //             tempo_total_cavalo3 == tempo_total_cavalo_1 &&
-    //             tempo_total_cavalo_1 < tempo_total_cavalo_2
-    //         ) {
-    //             primeiro = "Cavalo 1 e Cavalo 3";
-    //             segundo = "Cavalo2";
-    //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
-    //                                                 Em 2º Lugar – ${segundo}`;
-    //         } else if (
-    //             tempo_total_cavalo3 == tempo_total_cavalo_1 &&
-    //             tempo_total_cavalo_1 > tempo_total_cavalo_2
-    //         ) {
-    //             segundo = "Cavalo 1 e Cavalo 3";
-    //             primeiro = "Cavalo2";
-    //             div_msg2.innerHTML = `Em 1º Lugar – ${primeiro} <br>
-    //                                                     Em 2º Lugar – ${segundo}`;
-    //         }
-    //     }
-
-    //     if (contador > 7) {
-    //         contador = 0;
-    //         div_msg2.innerHTML = ``;
-    //         div_msg.innerHTML = ``;
-    //     }
 }
