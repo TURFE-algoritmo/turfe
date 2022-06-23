@@ -157,8 +157,8 @@ function volta() {
             if (index == 0) {
 
                 nome1.innerHTML = `${sessionStorage.nome_cv_1}`
-                tempo_CV1_VT.innerHTML += `${tempo_volta_cavalo_1}<br>`
-                tempo_CV1_TT.innerHTML += ` ${tempo_total_cavalo_1.toFixed(1)}  <br>`
+                tempo_CV1_VT.innerHTML += `<br>${tempo_volta_cavalo_1}<br>`
+                tempo_CV1_TT.innerHTML += ` <br>${tempo_total_cavalo_1.toFixed(1)}  <br>`
                 colocacao.push({ nome: sessionStorage.nome_cv_1, tep: tempo_total_cavalo_1 })
                 volta_CV_1.innerHTML += (`<br>Volta ${contador} <br>`)
             }
@@ -166,10 +166,10 @@ function volta() {
             if (index == 1) {
 
                 nome2.innerHTML = `${sessionStorage.nome_cv_2}`
-                tempo_CV2_VT.innerHTML += `${tempo_volta_cavalo_2}<br>`
-                tempo_CV2_TT.innerHTML += ` ${tempo_total_cavalo_2.toFixed(1)}  <br>`
+                tempo_CV2_VT.innerHTML += `<br>${tempo_volta_cavalo_2}<br>`
+                tempo_CV2_TT.innerHTML += ` <br>${tempo_total_cavalo_2.toFixed(1)}  <br>`
                 colocacao.push({ nome: sessionStorage.nome_cv_2, tep: tempo_total_cavalo_2 })
-        volta_CV_2.innerHTML += (`<br>Volta ${contador} <br>`)
+                volta_CV_2.innerHTML += (`<br>Volta ${contador} <br>`)
 
 
             }
@@ -177,10 +177,10 @@ function volta() {
             if (index == 2) {
 
                 nome3.innerHTML = `${sessionStorage.nome_cv_3}`
-                tempo_CV3_VT.innerHTML += `${tempo_volta_cavalo_3}<br>`
-                tempo_CV3_TT.innerHTML += ` ${tempo_total_cavalo_3.toFixed(1)}  <br>`
+                tempo_CV3_VT.innerHTML += `<br>${tempo_volta_cavalo_3}<br>`
+                tempo_CV3_TT.innerHTML += ` <br>${tempo_total_cavalo_3.toFixed(1)}  <br>`
                 colocacao.push({ nome: sessionStorage.nome_cv_3, tep: tempo_total_cavalo_3 })
-        volta_CV_3.innerHTML += (`<br>Volta ${contador} <br>`)
+                volta_CV_3.innerHTML += (`<br>Volta ${contador} <br>`)
 
 
             }
@@ -188,20 +188,20 @@ function volta() {
             if (index == 3) {
 
                 nome4.innerHTML = `${sessionStorage.nome_cv_4}`
-                tempo_CV4_VT.innerHTML += `${tempo_volta_cavalo_4}<br>`
-                tempo_CV4_TT.innerHTML += ` ${tempo_total_cavalo_4.toFixed(1)}<br>  `
+                tempo_CV4_VT.innerHTML += `<br>${tempo_volta_cavalo_4}<br>`
+                tempo_CV4_TT.innerHTML += `<br>${tempo_total_cavalo_4.toFixed(1)}<br>  `
                 colocacao.push({ nome: sessionStorage.nome_cv_4, tep: tempo_total_cavalo_4 })
-        volta_CV_4.innerHTML += (`<br>Volta ${contador} <br>`)
+                volta_CV_4.innerHTML += (`<br>Volta ${contador} <br>`)
 
             }
 
             if (index == 4) {
 
                 nome5.innerHTML = `${sessionStorage.nome_cv_5}`
-                tempo_CV5_VT.innerHTML += `${tempo_volta_cavalo_5}<br>`
-                tempo_CV5_TT.innerHTML += ` ${tempo_total_cavalo_5.toFixed(1)} <br> `
+                tempo_CV5_VT.innerHTML += `<br>${tempo_volta_cavalo_5}<br>`
+                tempo_CV5_TT.innerHTML += `<br>${tempo_total_cavalo_5.toFixed(1)} <br> `
                 colocacao.push({ nome: sessionStorage.nome_cv_5, tep: tempo_total_cavalo_5 })
-        volta_CV_5.innerHTML += (`<br>Volta ${contador} <br>`)
+                volta_CV_5.innerHTML += (`<br>Volta ${contador} <br>`)
 
             }
 
@@ -209,8 +209,8 @@ function volta() {
             if (index == 5) {
 
                 nome6.innerHTML = `${sessionStorage.nome_cv_6}`
-                tempo_CV6_VT.innerHTML += `${tempo_volta_cavalo_6}<br>`
-                tempo_CV6_TT.innerHTML += ` ${tempo_total_cavalo_6.toFixed(1)}  <br>`
+                tempo_CV6_VT.innerHTML += `<br>${tempo_volta_cavalo_6}<br>`
+                tempo_CV6_TT.innerHTML += `<br>${tempo_total_cavalo_6.toFixed(1)}  <br>`
                 colocacao.push({ nome: sessionStorage.nome_cv_6, tep: tempo_total_cavalo_6 })
         volta_CV_6.innerHTML += (`<br>Volta ${contador} <br>`)
 
