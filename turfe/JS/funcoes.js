@@ -22,45 +22,45 @@ var tempo_total_cavalo_4 = 0;
 var tempo_total_cavalo_5 = 0;
 var tempo_total_cavalo_6 = 0;
 
-var contador = 0;
+var contador = 1;
 
 // FUNÇÕES
 
 function on_qtd_cavalos() {
     qtd_cavalos = Number(slt_qtd_cavalos.value);
-    sessionStorage.qtd_cavalos =qtd_cavalos
-    if(qtd_cavalos != 0){
+    sessionStorage.qtd_cavalos = qtd_cavalos
+    if (qtd_cavalos != 0) {
 
-    alert(`A quantidade de cavalos será ${qtd_cavalos} `);
-
-
-    parte1.style.display = 'none'
-    parte2.style.display = 'block'
-
-    if (qtd_cavalos == 3) {
-
-        num_cav3.style.display = "block"
+        alert(`A quantidade de cavalos será ${qtd_cavalos} `);
 
 
-    } else if (qtd_cavalos == 4) {
+        parte1.style.display = 'none'
+        parte2.style.display = 'block'
 
-        num_cav3.style.display = "block"
-        num_cav4.style.display = "block"
+        if (qtd_cavalos == 3) {
 
-    } else if (qtd_cavalos == 5) {
+            num_cav3.style.display = "block"
 
-        num_cav3.style.display = "block"
-        num_cav4.style.display = "block"
-        num_cav5.style.display = "block"
-    } else if (qtd_cavalos == 6) {
 
-        num_cav3.style.display = "block"
-        num_cav4.style.display = "block"
-        num_cav5.style.display = "block"
-        num_cav6.style.display = "block"
+        } else if (qtd_cavalos == 4) {
 
-    }
-    }else{
+            num_cav3.style.display = "block"
+            num_cav4.style.display = "block"
+
+        } else if (qtd_cavalos == 5) {
+
+            num_cav3.style.display = "block"
+            num_cav4.style.display = "block"
+            num_cav5.style.display = "block"
+        } else if (qtd_cavalos == 6) {
+
+            num_cav3.style.display = "block"
+            num_cav4.style.display = "block"
+            num_cav5.style.display = "block"
+            num_cav6.style.display = "block"
+
+        }
+    } else {
         alert('insira uma quantidade valida')
     }
 
@@ -121,11 +121,11 @@ function proximo() {
 function on_qtd_voltas() {
     qtd_voltas = Number(slc_qtd_voltas.value);
     sessionStorage.qtd_voltas = qtd_voltas
-    if(qtd_voltas != 0){
+    if (qtd_voltas != 0) {
         // parte3.style.display = 'none'
         // parte4.style.display = 'block'
-        window. location. href = "./principal.html";
-    }else{
+        window.location.href = "./principal.html";
+    } else {
         alert("insira a quantidade de voltas")
     }
 
@@ -134,23 +134,23 @@ function on_qtd_voltas() {
 
 function volta() {
 
-    var tempo_volta_cavalo_1 = (Math.random() * 2 + 7).toFixed(1);
-    var tempo_volta_cavalo_2 = (Math.random() * 2 + 7).toFixed(1);
-    var tempo_volta_cavalo_3 = (Math.random() * 2 + 7).toFixed(1);
-    var tempo_volta_cavalo_4 = (Math.random() * 2 + 7).toFixed(1);
-    var tempo_volta_cavalo_5 = (Math.random() * 2 + 7).toFixed(1);
-    var tempo_volta_cavalo_6 = (Math.random() * 2 + 7).toFixed(1);
-    tempo_total_cavalo_1 += Number(tempo_volta_cavalo_1);
-    tempo_total_cavalo_2 += Number(tempo_volta_cavalo_2);
-    tempo_total_cavalo_3 += Number(tempo_volta_cavalo_3);
-    tempo_total_cavalo_4 += Number(tempo_volta_cavalo_4);
-    tempo_total_cavalo_5 += Number(tempo_volta_cavalo_5);
-    tempo_total_cavalo_6 += Number(tempo_volta_cavalo_6);
-    contador++;
-    colocacao = []
 
     if (contador <= sessionStorage.qtd_voltas) {
 
+        var tempo_volta_cavalo_1 = (Math.random() * 2 + 7).toFixed(1);
+        var tempo_volta_cavalo_2 = (Math.random() * 2 + 7).toFixed(1);
+        var tempo_volta_cavalo_3 = (Math.random() * 2 + 7).toFixed(1);
+        var tempo_volta_cavalo_4 = (Math.random() * 2 + 7).toFixed(1);
+        var tempo_volta_cavalo_5 = (Math.random() * 2 + 7).toFixed(1);
+        var tempo_volta_cavalo_6 = (Math.random() * 2 + 7).toFixed(1);
+        tempo_total_cavalo_1 += Number(tempo_volta_cavalo_1);
+        tempo_total_cavalo_2 += Number(tempo_volta_cavalo_2);
+        tempo_total_cavalo_3 += Number(tempo_volta_cavalo_3);
+        tempo_total_cavalo_4 += Number(tempo_volta_cavalo_4);
+        tempo_total_cavalo_5 += Number(tempo_volta_cavalo_5);
+        tempo_total_cavalo_6 += Number(tempo_volta_cavalo_6);
+
+        colocacao = []
 
         for (let index = 0; index < sessionStorage.qtd_cavalos; index++) {
 
@@ -161,7 +161,7 @@ function volta() {
                 tempo_CV1_TT.innerHTML += ` <br>${tempo_total_cavalo_1.toFixed(1)}  <br>`
                 colocacao.push({ nome: sessionStorage.nome_cv_1, tep: tempo_total_cavalo_1 })
                 volta_CV_1.innerHTML += (`<br>Volta ${contador} <br>`)
-                
+
             }
 
             if (index == 1) {
@@ -213,7 +213,7 @@ function volta() {
                 tempo_CV6_VT.innerHTML += `<br>${tempo_volta_cavalo_6}<br>`
                 tempo_CV6_TT.innerHTML += `<br>${tempo_total_cavalo_6.toFixed(1)}  <br>`
                 colocacao.push({ nome: sessionStorage.nome_cv_6, tep: tempo_total_cavalo_6 })
-        volta_CV_6.innerHTML += (`<br>Volta ${contador} <br>`)
+                volta_CV_6.innerHTML += (`<br>Volta ${contador} <br>`)
 
             }
 
@@ -241,17 +241,18 @@ function volta() {
 
 
     }
+    ++contador;
 
 }
 
-function podium(){
+function podium() {
     if (contador >= sessionStorage.qtd_voltas) {
         principal.style.display = 'none'
-    podioo.style.display = 'block'
+        podioo.style.display = 'block'
         podio();
 
 
-    }else{
+    } else {
         alert('a corrida ainda não acabou')
     }
 
@@ -264,8 +265,8 @@ function podio() {
         primeiro = colocacao[0].nome;
         segundo = colocacao[1].nome;
 
-        primeiro_col.innerHTML = ` ${primeiro}`
-        segundo_col.innerHTML = ` ${segundo}`
+        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro}</p>`
+        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo}</p>`
 
     } else if (sessionStorage.qtd_cavalos == 3) {
 
@@ -273,9 +274,9 @@ function podio() {
         segundo = colocacao[1].nome;
         terceiro = colocacao[2].nome;
 
-        primeiro_col.innerHTML = ` ${primeiro}`
-        segundo_col.innerHTML = ` ${segundo}`
-        terceiro_col.innerHTML = `${terceiro}`
+        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro}</p>`
+        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo}</p>`
+        terceiro_col.innerHTML = `<p style="margin-right: 20px;">${terceiro}</p>`
 
 
     } else if (sessionStorage.qtd_cavalos == 4) {
@@ -285,9 +286,9 @@ function podio() {
         terceiro = colocacao[2].nome;
         quarto = colocacao[3].nome;
 
-        primeiro_col.innerHTML = ` ${primeiro}`
-        segundo_col.innerHTML = ` ${segundo}`
-        terceiro_col.innerHTML = `${terceiro}`
+        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro}</p>`
+        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo}</p>`
+        terceiro_col.innerHTML = `<p style="margin-right: 20px;">${terceiro}</p>`
         quarto_col.innerHTML = ` ${quarto}`
 
     } else if (sessionStorage.qtd_cavalos == 5) {
@@ -298,9 +299,9 @@ function podio() {
         quarto = colocacao[3].nome;
         quinto = colocacao[4].nome;
 
-        primeiro_col.innerHTML = ` ${primeiro}`
-        segundo_col.innerHTML = ` ${segundo}`
-        terceiro_col.innerHTML = `${terceiro}`
+        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro}</p>`
+        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo}</p>`
+        terceiro_col.innerHTML = `<p style="margin-right: 20px;">${terceiro}</p>`
         quarto_col.innerHTML = ` ${quarto}`
         quinto_col.innerHTML = ` ${quinto}`
 
@@ -313,9 +314,9 @@ function podio() {
         quinto = colocacao[4].nome;
         sexto = colocacao[5].nome;
 
-        primeiro_col.innerHTML = ` ${primeiro}`
-        segundo_col.innerHTML = ` ${segundo}`
-        terceiro_col.innerHTML = `${terceiro}`
+        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro}</p>`
+        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo}</p>`
+        terceiro_col.innerHTML = `<p style="margin-right: 20px;">${terceiro}</p>`
         quarto_col.innerHTML = ` ${quarto}`
         quinto_col.innerHTML = ` ${quinto}`
         sexto_col.innerHTML = ` ${sexto}`
