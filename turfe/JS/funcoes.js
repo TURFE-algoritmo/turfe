@@ -28,6 +28,7 @@ var contador = 0;
 
 function on_qtd_cavalos() {
     qtd_cavalos = Number(slt_qtd_cavalos.value);
+    sessionStorage.qtd_cavalos =qtd_cavalos
     if(qtd_cavalos != 0){
 
     alert(`A quantidade de cavalos será ${qtd_cavalos} `);
@@ -73,32 +74,38 @@ function adicionar_nome() {
     if (nr_cavalo == 1) {
 
         nome_cv_1 = nome;
+        sessionStorage.nome_cv_1 = nome_cv_1
         alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
     } else if (nr_cavalo == 2) {
 
         nome_cv_2 = nome;
+        sessionStorage.nome_cv_2 = nome_cv_2
 
         alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
     } else if (nr_cavalo == 3) {
 
         nome_cv_3 = nome;
+        sessionStorage.nome_cv_3 = nome_cv_3
         alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
     } else if (nr_cavalo == 4) {
 
         nome_cv_4 = nome;
+        sessionStorage.nome_cv_4 = nome_cv_4
         alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
     } else if (nr_cavalo == 5) {
 
         nome_cv_5 = nome;
+        sessionStorage.nome_cv_5 = nome_cv_5
         alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
     } else if (nr_cavalo == 6) {
 
         nome_cv_6 = nome;
+        sessionStorage.nome_cv_6 = nome_cv_6
         alert(`cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
     }
 
@@ -113,9 +120,11 @@ function proximo() {
 
 function on_qtd_voltas() {
     qtd_voltas = Number(slc_qtd_voltas.value);
+    sessionStorage.qtd_voltas = qtd_voltas
     if(qtd_voltas != 0){
-        parte3.style.display = 'none'
-        parte4.style.display = 'block'
+        // parte3.style.display = 'none'
+        // parte4.style.display = 'block'
+        window. location. href = "./principal.html";
     }else{
         alert("insira a quantidade de voltas")
     }
@@ -140,49 +149,71 @@ function volta() {
     contador++;
     colocacao = []
 
-    if (contador <= qtd_voltas) {
+    if (contador <= sessionStorage.qtd_voltas) {
 
-        div_msg.innerHTML += (`<br>Volta ${contador} <br>`)
 
-        for (let index = 0; index < qtd_cavalos; index++) {
+        for (let index = 0; index < sessionStorage.qtd_cavalos; index++) {
 
             if (index == 0) {
 
-                div_msg.innerHTML += `${nome_cv_1} -  ${tempo_volta_cavalo_1} - ${tempo_total_cavalo_1.toFixed(1)}  `
-                colocacao.push({ nome: nome_cv_1, tep: tempo_total_cavalo_1 })
+                nome1.innerHTML = `${sessionStorage.nome_cv_1}`
+                tempo_CV1_VT.innerHTML += `${tempo_volta_cavalo_1}<br>`
+                tempo_CV1_TT.innerHTML += ` ${tempo_total_cavalo_1.toFixed(1)}  <br>`
+                colocacao.push({ nome: sessionStorage.nome_cv_1, tep: tempo_total_cavalo_1 })
+                volta_CV_1.innerHTML += (`<br>Volta ${contador} <br>`)
             }
 
             if (index == 1) {
 
-                div_msg.innerHTML += `| ${nome_cv_2} -  ${tempo_volta_cavalo_2} - ${tempo_total_cavalo_2.toFixed(1)}  `
-                colocacao.push({ nome: nome_cv_2, tep: tempo_total_cavalo_2 })
+                nome2.innerHTML = `${sessionStorage.nome_cv_2}`
+                tempo_CV2_VT.innerHTML += `${tempo_volta_cavalo_2}<br>`
+                tempo_CV2_TT.innerHTML += ` ${tempo_total_cavalo_2.toFixed(1)}  <br>`
+                colocacao.push({ nome: sessionStorage.nome_cv_2, tep: tempo_total_cavalo_2 })
+        volta_CV_2.innerHTML += (`<br>Volta ${contador} <br>`)
+
 
             }
 
             if (index == 2) {
 
-                div_msg.innerHTML += `| ${nome_cv_3} -  ${tempo_volta_cavalo_3} - ${tempo_total_cavalo_3.toFixed(1)}  `
-                colocacao.push({ nome: nome_cv_3, tep: tempo_total_cavalo_3 })
+                nome3.innerHTML = `${sessionStorage.nome_cv_3}`
+                tempo_CV3_VT.innerHTML += `${tempo_volta_cavalo_3}<br>`
+                tempo_CV3_TT.innerHTML += ` ${tempo_total_cavalo_3.toFixed(1)}  <br>`
+                colocacao.push({ nome: sessionStorage.nome_cv_3, tep: tempo_total_cavalo_3 })
+        volta_CV_3.innerHTML += (`<br>Volta ${contador} <br>`)
+
 
             }
 
             if (index == 3) {
 
-                div_msg.innerHTML += `| ${nome_cv_4} -  ${tempo_volta_cavalo_4} - ${tempo_total_cavalo_4.toFixed(1)}  `
-                colocacao.push({ nome: nome_cv_4, tep: tempo_total_cavalo_4 })
+                nome4.innerHTML = `${sessionStorage.nome_cv_4}`
+                tempo_CV4_VT.innerHTML += `${tempo_volta_cavalo_4}<br>`
+                tempo_CV4_TT.innerHTML += ` ${tempo_total_cavalo_4.toFixed(1)}<br>  `
+                colocacao.push({ nome: sessionStorage.nome_cv_4, tep: tempo_total_cavalo_4 })
+        volta_CV_4.innerHTML += (`<br>Volta ${contador} <br>`)
+
             }
 
             if (index == 4) {
 
-                div_msg.innerHTML += `| ${nome_cv_5} -  ${tempo_volta_cavalo_5} - ${tempo_total_cavalo_5.toFixed(1)}  `
-                colocacao.push({ nome: nome_cv_5, tep: tempo_total_cavalo_5 })
+                nome5.innerHTML = `${sessionStorage.nome_cv_5}`
+                tempo_CV5_VT.innerHTML += `${tempo_volta_cavalo_5}<br>`
+                tempo_CV5_TT.innerHTML += ` ${tempo_total_cavalo_5.toFixed(1)} <br> `
+                colocacao.push({ nome: sessionStorage.nome_cv_5, tep: tempo_total_cavalo_5 })
+        volta_CV_5.innerHTML += (`<br>Volta ${contador} <br>`)
+
             }
 
 
             if (index == 5) {
 
-                div_msg.innerHTML += `| ${nome_cv_6} -  ${tempo_volta_cavalo_6} - ${tempo_total_cavalo_6.toFixed(1)}  `
-                colocacao.push({ nome: nome_cv_6, tep: tempo_total_cavalo_6 })
+                nome6.innerHTML = `${sessionStorage.nome_cv_6}`
+                tempo_CV6_VT.innerHTML += `${tempo_volta_cavalo_6}<br>`
+                tempo_CV6_TT.innerHTML += ` ${tempo_total_cavalo_6.toFixed(1)}  <br>`
+                colocacao.push({ nome: sessionStorage.nome_cv_6, tep: tempo_total_cavalo_6 })
+        volta_CV_6.innerHTML += (`<br>Volta ${contador} <br>`)
+
             }
 
         }
@@ -192,16 +223,17 @@ function volta() {
 
         var temp_primeiro = colocacao[0].tep;
         var temp_segundo = colocacao[1].tep;
-
         var diferenca = temp_segundo - temp_primeiro;
         console.log(diferenca)
         if (diferenca == 0) {
 
-            div_msg.innerHTML += `<br>O priemrio colocado é ${primeiro_volta} || o primeiro está empatado com o segundo lugar`
+            primeiro_colocado.innerHTML = `${primeiro_volta}`
+            diferencas.innerHTML = `está empatado`
 
         } else {
 
-            div_msg.innerHTML += `<br>O primeiro colocado é ${primeiro_volta} || A diferença entre o primeiro e o segundo ${diferenca.toFixed(2)}`
+            primeiro_colocado.innerHTML = `${primeiro_volta}`
+            diferencas.innerHTML = ` ${diferenca.toFixed(2)}`
 
         }
 
