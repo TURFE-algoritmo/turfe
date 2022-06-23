@@ -40,7 +40,9 @@ body {
   font-weight: 700;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  margin-left: -4.5vw;
+  margin-left: -3.5vw;
+  padding-right: 1%;
+  padding-left: 1%;
 }
 
 .div__prim--podium--menor {
@@ -71,7 +73,9 @@ body {
   font-weight: 700;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  margin-left: -4.9vw;
+  margin-left: -3.9vw;
+  padding-right: 1%;
+  padding-left: 1%;
 }
 
 .div__sec--podium--menor {
@@ -102,7 +106,9 @@ body {
   font-weight: 700;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  margin-left: -5vw;
+  margin-left: -4vw;
+  padding-right: 1%;
+  padding-left: 1%;
 }
 
 .div__tec--podium--menor {
@@ -147,12 +153,12 @@ body {
 }
 
 .img__podium--maior {
-  width: 200px;
-  border-radius: 50px;
-  margin-left: 10%;
+  width: 180px;
+  border-radius: 100px;
 }
 
 .img__podium--menor {
   width: 70px;
-  border-radius: 50px;
+  border-radius: 100px;
+  margin-left: -10px;
 }
