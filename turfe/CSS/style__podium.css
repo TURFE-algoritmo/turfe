@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root {
   --blue : #1B9DD9;
   --grey : #F5F6FA;
@@ -11,9 +13,10 @@
   --bronze : #AC7D18;
 }
 
-/* body {
+body {
   background: var(--grey);
-} */
+  font-family: 'Montserrat', sans-serif;
+}
 
 .div__pai--podium {
   width: 100vw;
@@ -33,7 +36,7 @@
   height: 25vh;
   background: var(--yellow);
   color: var(--grey);
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -64,7 +67,7 @@
   height: 17vh;
   background: var(--silver);
   color: var(--grey);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -95,7 +98,7 @@
   height: 17vh;
   background: var(--bronze);
   color: var(--grey);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -136,22 +139,20 @@
   width: 80vw;
   height: 10vh;
   margin-top: 2vh;
-  color: var(--red);
+  color: rgb(200, 238, 240);
   font-size: 20px;
   font-weight: 700;
   border-radius: 40px;
-  background: #ffffff;
-  box-shadow: inset 5px -5px 100px #ebebeb,
-            inset -5px 5px 100px #ffffff;
+  background: #1F2739;
 }
 
 .img__podium--maior {
   width: 200px;
-  border-radius: 10px;
+  border-radius: 50px;
   margin-left: 10%;
 }
 
 .img__podium--menor {
   width: 70px;
-  border-radius: 10px;
+  border-radius: 50px;
 }
