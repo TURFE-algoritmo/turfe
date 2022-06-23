@@ -12,12 +12,12 @@
     line-height: 1.42em;
     color:#A7A1AE;
     background-color:#1F2739;
-    background: url(./img/BannerTable.png);
+    /* background: url(./img/BannerTable.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     /* filter: blur(1px); */
-    height: 650px;
+    height: 100%;
  }
  
  h1 {
