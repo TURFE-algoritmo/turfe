@@ -341,7 +341,7 @@ function volta() {
         } else {
 
             primeiro_colocado.innerHTML = `${primeiro_volta}`
-            diferencas.innerHTML = ` ${diferenca.toFixed(2)}`
+            diferencas.innerHTML = ` ${diferenca.toFixed(1)}`
         }
     }
 
@@ -370,19 +370,25 @@ function podio() {
 
         primeiro = colocacao[0].nome;
         segundo = colocacao[1].nome;
+        primeiroTep = colocacao[0].tep;
+        segundoTep = colocacao[1].tep;
 
-        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro}</p>`
-        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo}</p>`
+        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro}<br> ${primeiroTep.toFixed(1)}</p>`
+        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo} <br> ${segundoTep.toFixed(1)}</p>`
 
     } else if (sessionStorage.qtd_cavalos == 3) {
 
         primeiro = colocacao[0].nome;
         segundo = colocacao[1].nome;
         terceiro = colocacao[2].nome;
+        primeiroTep = colocacao[0].tep;
+        segundoTep = colocacao[1].tep;
+        terceiroTep = colocacao[2].tep;
 
-        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro}</p>`
-        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo}</p>`
-        terceiro_col.innerHTML = `<p style="margin-right: 20px;">${terceiro}</p>`
+
+        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro}<br> ${primeiroTep.toFixed(1)}</p>`
+        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo}<br>${segundoTep.toFixed(1)}</p>`
+        terceiro_col.innerHTML = `<p style="margin-right: 20px;">${terceiro}<br>${terceiroTep.toFixed(1)}</p>`
 
 
     } else if (sessionStorage.qtd_cavalos == 4) {
@@ -391,11 +397,16 @@ function podio() {
         segundo = colocacao[1].nome;
         terceiro = colocacao[2].nome;
         quarto = colocacao[3].nome;
+        primeiroTep = colocacao[0].tep;
+        segundoTep = colocacao[1].tep;
+        terceiroTep = colocacao[2].tep;
+        quartoTep = colocacao[3].tep;
 
-        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro}</p>`
-        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo}</p>`
-        terceiro_col.innerHTML = `<p style="margin-right: 20px;">${terceiro}</p>`
-        quarto_col.innerHTML = ` ${quarto}`
+
+        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro} <br> ${primeiroTep.toFixed(1)}</p>`
+        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo}<br>${segundoTep.toFixed(1)}</p>`
+        terceiro_col.innerHTML = `<p style="margin-right: 20px;">${terceiro}<br>${terceiroTep.toFixed(1)}</p>`
+        quarto_col.innerHTML = ` ${quarto} com o tempo de: ${quartoTep.toFixed(1)}`
 
     } else if (sessionStorage.qtd_cavalos == 5) {
 
@@ -404,12 +415,17 @@ function podio() {
         terceiro = colocacao[2].nome;
         quarto = colocacao[3].nome;
         quinto = colocacao[4].nome;
+        primeiroTep = colocacao[0].tep;
+        segundoTep = colocacao[1].tep;
+        terceiroTep = colocacao[2].tep;
+        quartoTep = colocacao[3].tep;
+        quintoTep = colocacao[4].tep;
 
-        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro}</p>`
-        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo}</p>`
-        terceiro_col.innerHTML = `<p style="margin-right: 20px;">${terceiro}</p>`
-        quarto_col.innerHTML = ` ${quarto}`
-        quinto_col.innerHTML = ` ${quinto}`
+        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro} <br> ${primeiroTep.toFixed(1)}</p>`
+        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo}<br>${segundoTep.toFixed(1)}</p>`
+        terceiro_col.innerHTML = `<p style="margin-right: 20px;">${terceiro}<br>${terceiroTep.toFixed(1)}</p>`
+        quarto_col.innerHTML = ` ${quarto} com o tempo de: ${quartoTep.toFixed(1)}`
+        quinto_col.innerHTML = ` ${quinto} com o tempo de: ${quintoTep.toFixed(1)}`
 
     } else if (sessionStorage.qtd_cavalos == 6) {
 
@@ -419,13 +435,19 @@ function podio() {
         quarto = colocacao[3].nome;
         quinto = colocacao[4].nome;
         sexto = colocacao[5].nome;
+        primeiroTep = colocacao[0].tep;
+        segundoTep = colocacao[1].tep;
+        terceiroTep = colocacao[2].tep;
+        quartoTep = colocacao[3].tep;
+        quintoTep = colocacao[4].tep;
+        sextoTep = colocacao[5].tep;
 
-        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro}</p>`
-        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo}</p>`
-        terceiro_col.innerHTML = `<p style="margin-right: 20px;">${terceiro}</p>`
-        quarto_col.innerHTML = ` ${quarto}`
-        quinto_col.innerHTML = ` ${quinto}`
-        sexto_col.innerHTML = ` ${sexto}`
+        primeiro_col.innerHTML = `<p style="margin-right: 20px;">${primeiro} <br> ${primeiroTep.toFixed(1)}</p>`
+        segundo_col.innerHTML = `<p style="margin-right: 20px;">${segundo}<br>${segundoTep.toFixed(1)}</p>`
+        terceiro_col.innerHTML = `<p style="margin-right: 20px;">${terceiro}<br>${terceiroTep.toFixed(1)}</p>`
+        quarto_col.innerHTML = ` ${quarto} com o tempo de: ${quartoTep.toFixed(1)}`
+        quinto_col.innerHTML = ` ${quinto} com o tempo de: ${quintoTep.toFixed(1)}`
+        sexto_col.innerHTML = ` ${sexto} com o tempo de: ${sextoTep.toFixed(1)}`
 
     }
 }
