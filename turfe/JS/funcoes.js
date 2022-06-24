@@ -69,7 +69,8 @@ function on_qtd_cavalos() {
 function adicionar_nome() {
 
     var nr_cavalo = Number(numero_cavalo.value)
-    var nome = nome_cavalo.value 
+    var nomeS = nome_cavalo.value
+    var nome = nomeS.toUpperCase() 
 
     if (nome == "") {
         alert('Insira um valor valido')
@@ -126,6 +127,9 @@ function adicionar_nome() {
             nome_cv_6 = nome;
             sessionStorage.nome_cv_6 = nome_cv_6
             alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+            if (qtd_cavalos >= 6) {
+                numero_cavalo.value = "1";
+            }
         }
     }
     nome_cavalo.value = ''
