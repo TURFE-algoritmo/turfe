@@ -73,7 +73,10 @@ function adicionar_nome() {
 
     if (nome == "") {
         alert('Insira um valor valido')
-    } else {
+    } else if(nome == nome_cv_1 || nome == nome_cv_2 || nome == nome_cv_3 || nome == nome_cv_4 || nome == nome_cv_5 || nome == nome_cv_6 ){
+        alert('Valor não cadastrado, cavalos com nome igual!')
+    }
+    else{
         if (nr_cavalo == 1) {
 
 
@@ -229,12 +232,12 @@ function proximo() {
 function on_qtd_voltas() {
     qtd_voltas = Number(slc_qtd_voltas.value);
     sessionStorage.qtd_voltas = qtd_voltas
-    if (qtd_voltas != 0) {
+    if (qtd_voltas > 0) {
 
         window.location.href = "./principal.html";
 
     } else {
-        alert("Insira a quantidade de voltas")
+        alert("Insira uma quantidade de voltas válida")
     }
 }
 
@@ -456,7 +459,6 @@ function reiniciar(){
     sessionStorage.clear()
     window.location.href = "./index.html";
 }
-
 
 function GetSortOrder(prop) {
     return function (a, b) {
