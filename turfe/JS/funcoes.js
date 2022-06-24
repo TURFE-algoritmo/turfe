@@ -4,6 +4,9 @@ var qtd_voltas = 0;
 
 var colocacao = []
 
+var empate = false;
+var empate2 = false;
+
 var primeiro = "";
 var segundo = "";
 var terceiro = "";
@@ -337,18 +340,27 @@ function volta() {
 
         var temp_primeiro = colocacao[0].tep;
         var temp_segundo = colocacao[1].tep;
+        var temp_terceiro = colocacao[2].tep;
         var diferenca = temp_segundo - temp_primeiro;
+        var diferenca2 = temp_terceiro - temp_segundo;
         console.log(diferenca)
 
         if (diferenca == 0) {
 
             primeiro_colocado.innerHTML = `${primeiro_volta}`
             diferencas.innerHTML = `está empatado`
-
+            empate = true;
         } else {
-
+            empate = false;
             primeiro_colocado.innerHTML = `${primeiro_volta}`
             diferencas.innerHTML = ` ${diferenca.toFixed(1)}`
+        }
+
+        if (diferenca2 == 0) {
+
+            empate2 = true;
+        } else {
+            empate2 = false;
         }
     }
 
@@ -372,6 +384,20 @@ function podium() {
 }
 
 function podio() {
+
+    if(empate){
+        pd_empate.style.display = 'block'
+    }else{
+        pd_empate.style.display = 'none'
+
+    }
+
+    if(empate2){
+        pd_empate2.style.display = 'block'
+    }else{
+        pd_empate2.style.display = 'none'
+
+    }
 
     if (sessionStorage.qtd_cavalos == 2) {
 
