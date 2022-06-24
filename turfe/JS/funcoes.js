@@ -69,52 +69,160 @@ function on_qtd_cavalos() {
 function adicionar_nome() {
 
     var nr_cavalo = Number(numero_cavalo.value)
-    var nome = nome_cavalo.value
+    var nome = nome_cavalo.value 
 
-    if (nr_cavalo == 1) {
+    if (nome == "") {
+        alert('Insira um valor valido')
+    } else {
+        if (nr_cavalo == 1) {
 
-        nome_cv_1 = nome;
-        sessionStorage.nome_cv_1 = nome_cv_1
-        alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
 
-    } else if (nr_cavalo == 2) {
+            nome_cv_1 = nome;
+            sessionStorage.nome_cv_1 = nome_cv_1
+            alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+            numero_cavalo.value = "2";
 
-        nome_cv_2 = nome;
-        sessionStorage.nome_cv_2 = nome_cv_2
-        alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+        } else if (nr_cavalo == 2) {
 
-    } else if (nr_cavalo == 3) {
+            nome_cv_2 = nome;
+            sessionStorage.nome_cv_2 = nome_cv_2
+            alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+            if (qtd_cavalos >= 3) {
+                numero_cavalo.value = "3";
 
-        nome_cv_3 = nome;
-        sessionStorage.nome_cv_3 = nome_cv_3
-        alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+            }
 
-    } else if (nr_cavalo == 4) {
+        } else if (nr_cavalo == 3) {
 
-        nome_cv_4 = nome;
-        sessionStorage.nome_cv_4 = nome_cv_4
-        alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+            nome_cv_3 = nome;
+            sessionStorage.nome_cv_3 = nome_cv_3
+            alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+            if (qtd_cavalos >= 4) {
+                numero_cavalo.value = "4";
+            }
+        } else if (nr_cavalo == 4) {
 
-    } else if (nr_cavalo == 5) {
+            nome_cv_4 = nome;
+            sessionStorage.nome_cv_4 = nome_cv_4
+            alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+            if (qtd_cavalos >= 5) {
+                numero_cavalo.value = "5";
+            }
 
-        nome_cv_5 = nome;
-        sessionStorage.nome_cv_5 = nome_cv_5
-        alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+        } else if (nr_cavalo == 5) {
 
-    } else if (nr_cavalo == 6) {
+            nome_cv_5 = nome;
+            sessionStorage.nome_cv_5 = nome_cv_5
+            alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+            if (qtd_cavalos >= 6) {
+                numero_cavalo.value = "6";
+            }
 
-        nome_cv_6 = nome;
-        sessionStorage.nome_cv_6 = nome_cv_6
-        alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+        } else if (nr_cavalo == 6) {
+
+            nome_cv_6 = nome;
+            sessionStorage.nome_cv_6 = nome_cv_6
+            alert(`Cavalo de numero ${nr_cavalo}° cadastrado com nome ${nome}`)
+        }
     }
-
     nome_cavalo.value = ''
+
+
+
+    if (qtd_cavalos == 2) {
+        nome_Cav.innerHTML =
+            `Nome dos cavalos: <br>
+    Nome do cavalo 1 = ${nome_cv_1} <br> 
+    Nome do cavalo 2 = ${nome_cv_2}`;
+
+
+    } else if (qtd_cavalos == 3) {
+
+        nome_Cav.innerHTML =
+            `Nome dos cavalos: <br>
+    Nome do cavalo 1 = ${nome_cv_1} <br> 
+    Nome do cavalo 2 = ${nome_cv_2} <br>
+    Nome do cavalo 3 = ${nome_cv_3}`;
+
+    } else if (qtd_cavalos == 4) {
+
+        nome_Cav.innerHTML =
+            `Nome dos cavalos: <br>
+    Nome do cavalo 1 = ${nome_cv_1} <br> 
+    Nome do cavalo 2 = ${nome_cv_2} <br>
+    Nome do cavalo 3 = ${nome_cv_3}<br>
+    Nome do cavalo 4 = ${nome_cv_4}`;
+
+    } else if (qtd_cavalos == 5) {
+
+        nome_Cav.innerHTML =
+            `Nome dos cavalos: <br>
+        Nome do cavalo 1 = ${nome_cv_1} <br> 
+        Nome do cavalo 2 = ${nome_cv_2} <br>
+        Nome do cavalo 3 = ${nome_cv_3}<br>
+        Nome do cavalo 4 = ${nome_cv_4}<br>
+        Nome do cavalo 5 = ${nome_cv_5}`
+
+    } else if (qtd_cavalos == 6) {
+
+        nome_Cav.innerHTML =
+            `Nome dos cavalos: <br>
+        Nome do cavalo 1 = ${nome_cv_1} <br> 
+        Nome do cavalo 2 = ${nome_cv_2} <br>
+        Nome do cavalo 3 = ${nome_cv_3}<br>
+        Nome do cavalo 4 = ${nome_cv_4}<br>
+        Nome do cavalo 5 = ${nome_cv_5}<br>
+        Nome do cavalo 6 = ${nome_cv_6}`
+    }
 }
 
 function proximo() {
 
-    parte2.style.display = 'none'
-    parte3.style.display = 'block'
+    if (qtd_cavalos == 2) {
+        if (nome_cv_1 != '' && nome_cv_2 != '') {
+            parte2.style.display = 'none'
+            parte3.style.display = 'block'
+        } else {
+            alert('Por favor, insira um nome para todos os cavalos')
+        }
+
+    } else if (qtd_cavalos == 3) {
+
+        if (nome_cv_1 != '' && nome_cv_2 != '' && nome_cv_3 != '') {
+            parte2.style.display = 'none'
+            parte3.style.display = 'block'
+        } else {
+            alert('Por favor, insira um nome para todos os cavalos')
+        }
+
+    } else if (qtd_cavalos == 4) {
+
+        if (nome_cv_1 != '' && nome_cv_2 != '' && nome_cv_3 != '' && nome_cv_4 != '') {
+            parte2.style.display = 'none'
+            parte3.style.display = 'block'
+        } else {
+            alert('Por favor, insira um nome para todos os cavalos')
+        }
+
+    } else if (qtd_cavalos == 5) {
+
+        if (nome_cv_1 != '' && nome_cv_2 != '' && nome_cv_3 != '' && nome_cv_4 != '' && nome_cv_5 != '') {
+            parte2.style.display = 'none'
+            parte3.style.display = 'block'
+        } else {
+            alert('Por favor, insira um nome para todos os cavalos')
+        }
+
+    } else if (qtd_cavalos == 6) {
+
+        if (nome_cv_1 != '' && nome_cv_2 != '' && nome_cv_3 != '' && nome_cv_4 != '' && nome_cv_5 != '' && nome_cv_6 != '') {
+            parte2.style.display = 'none'
+            parte3.style.display = 'block'
+        } else {
+            alert('Por favor, insira um nome para todos os cavalos')
+        }
+    }
+
 
 }
 
@@ -321,6 +429,12 @@ function podio() {
 
     }
 }
+
+function reiniciar(){
+    sessionStorage.clear()
+    window.location.href = "./index.html";
+}
+
 
 function GetSortOrder(prop) {
     return function (a, b) {
