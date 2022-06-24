@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="CSS/style__index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Ubuntu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght&family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +25,8 @@
         <div class="box-itens">
           <div class="juntos">
             <label>Selecione a quantidade de cavalos</label>
-            <select id="slt_qtd_cavalos">
+            
+            <select class="borda__select" id="slt_qtd_cavalos">
               <option value="0">Selecione a quantidade</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -55,15 +56,15 @@
           </div>
           <!-- nome do cavalo -->
           <div class="nome">
-            <label>Nome do cavalo</label>
+            <label >Nome do cavalo</label>
             <div class="nome-cavalo">
-              <input type="text" id="nome_cavalo" autofocus/>
+              <input class="nomeCavalo" type="text" id="nome_cavalo" autofocus/>
 
               <!-- botão para adicionar -->
               <button onclick="adicionar_nome()">Adicionar nome</button>
             </div>
             <div>
-              <p id="nome_Cav">Insira o nome de todos os cavalos cavalos!</p>
+              <p id="nome_Cav" class="nome__cadastro  ">Insira o nome de todos os cavalos cavalos!</p>
             </div>
 
           </div>

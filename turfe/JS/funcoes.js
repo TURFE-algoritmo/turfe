@@ -138,26 +138,26 @@ function adicionar_nome() {
 
     if (qtd_cavalos == 2) {
         nome_Cav.innerHTML =
-            `Nome dos cavalos: <br>
-    Nome do cavalo 1 = ${nome_cv_1} <br> 
+            `Nome dos cavalos: <br><br>
+    Nome do cavalo 1 = ${nome_cv_1} <br><br> 
     Nome do cavalo 2 = ${nome_cv_2}`;
 
 
     } else if (qtd_cavalos == 3) {
 
         nome_Cav.innerHTML =
-            `Nome dos cavalos: <br>
-    Nome do cavalo 1 = ${nome_cv_1} <br> 
-    Nome do cavalo 2 = ${nome_cv_2} <br>
+            `Nome dos cavalos: <br><br>
+    Nome do cavalo 1 = ${nome_cv_1} <br><br> 
+    Nome do cavalo 2 = ${nome_cv_2} <br><br>
     Nome do cavalo 3 = ${nome_cv_3}`;
 
     } else if (qtd_cavalos == 4) {
 
         nome_Cav.innerHTML =
-            `Nome dos cavalos: <br>
-    Nome do cavalo 1 = ${nome_cv_1} <br> 
-    Nome do cavalo 2 = ${nome_cv_2} <br>
-    Nome do cavalo 3 = ${nome_cv_3}<br>
+            `Nome dos cavalos: <br><br>
+    Nome do cavalo 1 = ${nome_cv_1} <br><br> 
+    Nome do cavalo 2 = ${nome_cv_2} <br><br>
+    Nome do cavalo 3 = ${nome_cv_3}<br><br>
     Nome do cavalo 4 = ${nome_cv_4}`;
 
     } else if (qtd_cavalos == 5) {
